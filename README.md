@@ -119,8 +119,6 @@ Inherited from upstream, documented rather than hidden:
 - **Idle pause and the finalization fixes are screen-only.** The camera recorder still
   has the un-awaited `finishWriting` and blocking `sleep(1)` that were fixed on the
   screen path.
-- **Onboarding art does not render in a distributed build**, because the preview assets
-  live in `DEVELOPMENT_ASSET_PATHS`.
 
 ## Building from the command line
 
