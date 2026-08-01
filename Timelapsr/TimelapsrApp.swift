@@ -25,7 +25,11 @@ struct TimelapsrApp: App {
       .windowToolbarStyle(.unifiedCompact)
 
     Settings {
-      PreferencesView().environmentObject(preferencesViewModel)
+      // recorderViewModel is needed too: the Apps tab toggles its `apps` map, and
+      // Settings is a window so the list stays open while several are changed.
+      PreferencesView()
+        .environmentObject(preferencesViewModel)
+        .environmentObject(recorderViewModel)
         .onAppear {
           NSApplication.shared.activate(ignoringOtherApps: true)
         }

@@ -1,5 +1,6 @@
 import AVFoundation
 import AppKit
+import ScreenCaptureKit
 import SwiftUI
 
 /// Represents a user's preferences or settings
@@ -9,6 +10,7 @@ import SwiftUI
 /// - Video Settings
 struct PreferencesView: View {
   @EnvironmentObject private var preferencesViewModel: PreferencesViewModel
+  @EnvironmentObject private var recorderViewModel: RecorderViewModel
 
   var body: some View {
     TabView {
@@ -18,10 +20,88 @@ struct PreferencesView: View {
       videoSettings().tabItem {
         Label("Video", systemImage: "video")
       }.navigationTitle("Timelapsr Settings")
+      appSettings().tabItem {
+        Label("Apps", systemImage: "square.grid.2x2")
+      }.navigationTitle("Timelapsr Settings")
     }
     .frame(width: 450)
     .fixedSize()
     .background(VisualEffectView().ignoresSafeArea())
+  }
+
+  /// Which running applications appear in the recording.
+  ///
+  /// This lives in Settings rather than the menu bar because an `NSMenu` dismisses on
+  /// every click, so toggling several apps there meant reopening the menu each time.
+  /// A window stays put.
+  func appSettings() -> some View {
+    VStack(alignment: .leading, spacing: 12) {
+      Text("Timelapsr App Settings")
+        .fontWeight(.semibold)
+        .font(.headline)
+
+      Text("Unchecked apps are hidden from the recording.")
+        .font(.caption)
+        .foregroundStyle(.secondary)
+
+      HStack {
+        Button("Enable All") { recorderViewModel.resetApps() }
+        Button("Invert") { recorderViewModel.invertApplications() }
+        Spacer()
+        Text("\(enabledAppCount) of \(sortedApps.count) enabled")
+          .font(.caption)
+          .foregroundStyle(.secondary)
+      }
+
+      Divider()
+
+      ScrollView {
+        VStack(alignment: .leading, spacing: 2) {
+          ForEach(sortedApps, id: \.self) { app in
+            appRow(app)
+          }
+        }
+      }
+      .frame(height: 260)
+    }
+    .padding(30)
+  }
+
+  /// One checkbox row, with the app's real icon for quick scanning
+  @ViewBuilder
+  func appRow(_ app: SCRunningApplication) -> some View {
+    Toggle(
+      isOn: Binding(
+        get: { recorderViewModel.apps[app] ?? true },
+        set: { _ in recorderViewModel.toggleApp(app: app) }
+      )
+    ) {
+      HStack(spacing: 8) {
+        if let running = NSRunningApplication(processIdentifier: app.processID),
+          let icon = running.icon
+        {
+          Image(nsImage: icon).resizable().frame(width: 18, height: 18)
+        }
+        Text(app.applicationName)
+      }
+    }
+    .toggleStyle(.checkbox)
+  }
+
+  /// Only user-facing apps, alphabetised so the list does not reshuffle as processes churn
+  private var sortedApps: [SCRunningApplication] {
+    recorderViewModel.apps.keys
+      .filter { app in
+        guard let running = NSRunningApplication(processIdentifier: app.processID) else {
+          return false
+        }
+        return running.activationPolicy == .regular && !app.applicationName.isEmpty
+      }
+      .sorted { $0.applicationName.localizedCaseInsensitiveCompare($1.applicationName) == .orderedAscending }
+  }
+
+  private var enabledAppCount: Int {
+    sortedApps.filter { recorderViewModel.apps[$0] ?? true }.count
   }
 
   func generalSettings() -> some View {
