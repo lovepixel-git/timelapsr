@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/icon.png" alt="Timelapsr" width="128"></p>
+
 <h1 align="center">Timelapsr</h1>
 
 <p align="center">
