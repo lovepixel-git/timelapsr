@@ -17,8 +17,15 @@
 
 ---
 
-> **Screenshots go here.** Menu bar dropdown while recording, and the Preferences
-> window showing the speed slider and idle timeout.
+<p align="center">
+  <img src="docs/menu-bar.png" alt="Timelapsr menu bar" width="330">
+  &nbsp;&nbsp;
+  <img src="docs/app-filtering.png" alt="Per-app filtering" width="420">
+</p>
+
+<p align="center">
+  <img src="docs/settings.png" alt="Timelapsr settings" width="470">
+</p>
 
 ## Why this fork exists
 

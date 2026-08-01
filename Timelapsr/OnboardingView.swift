@@ -145,22 +145,26 @@ struct OnboardingView: View {
         .accessibilityIdentifier("feature_background")
       VStack(alignment: .leading) {
         VStack(alignment: .leading, spacing: DrawingConstants.spacing) {
+          // Plain system widths. `.condensed` and especially `.expanded` cost real
+          // legibility at small sizes over photographic backgrounds, so weight and size
+          // carry the hierarchy instead. The shadow keeps text readable over light
+          // regions of the image regardless of what the screenshot happens to contain.
           Text(title)
-            .fontWeight(.bold)
-            .fontWidth(.condensed)
             .font(.title)
+            .fontWeight(.bold)
             .foregroundStyle(.white)
+            .shadow(color: .black.opacity(0.6), radius: 4, x: 0, y: 1)
             .accessibilityIdentifier("feature_title")
 
           Text(subtitle)
-            .fontWeight(.medium)
-            .fontWidth(.expanded)
-            .font(.subheadline)
+            .font(.body)
+            .fontWeight(.regular)
             .frame(
               maxWidth: (DrawingConstants.width - 2 * DrawingConstants.padding)
                 * DrawingConstants.twoThirds, alignment: .leading
             )
-            .foregroundStyle(.white)
+            .foregroundStyle(.white.opacity(0.92))
+            .shadow(color: .black.opacity(0.6), radius: 4, x: 0, y: 1)
             .accessibilityIdentifier("feature_subtitle")
         }.transition(.move(edge: .leading))
 
