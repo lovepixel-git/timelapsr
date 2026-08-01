@@ -2,6 +2,105 @@ import AVFoundation
 import Foundation
 import ScreenCaptureKit
 
+/// Resolved capture geometry, shared by the `SCStream` configuration and the
+/// `AVAssetWriter` so the two can never disagree about output size.
+struct CaptureGeometry {
+  /// Region of the display to capture, in points. `nil` captures the whole display.
+  var sourceRect: CGRect?
+  /// Output width in pixels. Always even.
+  var width: Int
+  /// Output height in pixels. Always even.
+  var height: Int
+}
+
+/// Aspect ratios offered for framing, as width / height. `0` means "match the display".
+enum AspectRatio {
+  static let native: Double = 0
+  static let options: [Double] = [0, 16.0 / 9.0, 4.0 / 3.0, 1.0, 9.0 / 16.0]
+
+  static func label(_ ratio: Double) -> String {
+    switch ratio {
+    case 0: return "Native"
+    case 16.0 / 9.0: return "16:9"
+    case 4.0 / 3.0: return "4:3"
+    case 1.0: return "1:1 Square"
+    case 9.0 / 16.0: return "9:16 Vertical"
+    default: return String(format: "%.2f", ratio)
+    }
+  }
+}
+
+/// Maximum output long-edge in pixels. `0` keeps the display's native resolution.
+enum ResolutionCap {
+  static let options: [Int] = [0, 3840, 2560, 1920, 1280]
+
+  static func label(_ cap: Int) -> String {
+    switch cap {
+    case 0: return "Native"
+    case 3840: return "4K (3840)"
+    case 2560: return "1440p (2560)"
+    case 1920: return "1080p (1920)"
+    case 1280: return "720p (1280)"
+    default: return "\(cap) px"
+    }
+  }
+}
+
+/// Resolves the capture rectangle and output pixel size from the user's framing and
+/// resolution preferences.
+///
+/// Framing crops a centred region of the display to the requested aspect ratio. The
+/// resolution cap then scales that result down so its long edge never exceeds the limit,
+/// which is the main lever on file size. Dimensions are forced even because H.264 and
+/// HEVC reject odd ones.
+func resolveCaptureGeometry(
+  displayWidth: Int, displayHeight: Int, pixelScale: CGFloat
+) -> CaptureGeometry {
+  let aspect = UserDefaults.standard.double(forKey: "aspectRatio")
+  let cap = UserDefaults.standard.integer(forKey: "resolutionCap")
+
+  let fullWidth = CGFloat(displayWidth)
+  let fullHeight = CGFloat(displayHeight)
+
+  var cropWidth = fullWidth
+  var cropHeight = fullHeight
+  var sourceRect: CGRect?
+
+  // Centre-crop to the requested aspect ratio, keeping as much of the display as fits.
+  if aspect > 0, fullHeight > 0 {
+    if fullWidth / fullHeight > aspect {
+      cropWidth = cropHeight * aspect  // display is wider than the target
+    } else {
+      cropHeight = cropWidth / aspect  // display is taller than the target
+    }
+    sourceRect = CGRect(
+      x: (fullWidth - cropWidth) / 2,
+      y: (fullHeight - cropHeight) / 2,
+      width: cropWidth,
+      height: cropHeight
+    )
+  }
+
+  var pixelWidth = cropWidth * pixelScale
+  var pixelHeight = cropHeight * pixelScale
+
+  if cap > 0 {
+    let longEdge = max(pixelWidth, pixelHeight)
+    if longEdge > CGFloat(cap) {
+      let scale = CGFloat(cap) / longEdge
+      pixelWidth *= scale
+      pixelHeight *= scale
+    }
+  }
+
+  // `& ~1` clears the low bit, forcing even dimensions.
+  return CaptureGeometry(
+    sourceRect: sourceRect,
+    width: max(2, Int(pixelWidth.rounded()) & ~1),
+    height: max(2, Int(pixelHeight.rounded()) & ~1)
+  )
+}
+
 /// Seconds since the user last produced any HID input (key, mouse move, click, scroll).
 ///
 /// Used to pause capture while the user is away so long breaks do not become dead air

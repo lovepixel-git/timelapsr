@@ -62,6 +62,8 @@ class TimelapsrAppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationC
     UserDefaults.standard.register(defaults: [
       "timeMultiple": 5.0,
       "idleTimeout": 0.0,
+      "aspectRatio": 0.0,
+      "resolutionCap": 0,
     ])
 
     // Hide the dock icon

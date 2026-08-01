@@ -102,6 +102,26 @@ struct PreferencesView: View {
     .font(.caption)
     .foregroundStyle(.secondary)
 
+    Picker("Framing", selection: $preferencesViewModel.aspectRatio) {
+      ForEach(AspectRatio.options, id: \.self) { ratio in
+        Text(AspectRatio.label(ratio)).tag(ratio)
+      }
+    }
+
+    Picker("Resolution", selection: $preferencesViewModel.resolutionCap) {
+      ForEach(ResolutionCap.options, id: \.self) { cap in
+        Text(ResolutionCap.label(cap)).tag(cap)
+      }
+    }
+
+    Text(
+      preferencesViewModel.aspectRatio == AspectRatio.native
+        ? "Captures the whole display at its native resolution."
+        : "Centre-crops the display to \(AspectRatio.label(preferencesViewModel.aspectRatio)). Lowering the resolution is the biggest lever on file size."
+    )
+    .font(.caption)
+    .foregroundStyle(.secondary)
+
     if #available(macOS 14.0, *) {
       Picker("Output FPS", selection: $preferencesViewModel.fpsDropdown) {
         ForEach(0..<preferencesViewModel.validFPS.count) { index in

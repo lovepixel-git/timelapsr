@@ -30,6 +30,9 @@ class Screen: NSObject, SCStreamOutput, Recordable {
   /// Seconds of user inactivity after which frames stop being captured. `0` records
   /// continuously. Cached per recording in ``setupWriter``.
   var idleTimeout: Double = 0
+  /// Framing and output size, resolved once per recording in ``setupStream`` and reused by
+  /// ``setupWriter`` so both agree.
+  var geometry = CaptureGeometry(sourceRect: nil, width: 0, height: 0)
   var frameCount: Int = 0
   var frameChanged = true
 
@@ -168,9 +171,13 @@ class Screen: NSObject, SCStreamOutput, Recordable {
     // uses a settings recommender to get the video settings
     let settingsAssistant = AVOutputSettingsAssistant(preset: config.preset)!
 
+    // Geometry is resolved in `setupStream`, which always runs first (see `setup`). Falling
+    // back to the native size keeps this safe if that order ever changes.
     let pixelRatio = getPixelRatio(for: screen.displayID) ?? 1.0
-    let width = Int(CGFloat(screen.width) * pixelRatio)
-    let height = Int(CGFloat(screen.height) * pixelRatio)
+    let width =
+      geometry.width > 0 ? geometry.width : Int(CGFloat(screen.width) * pixelRatio)
+    let height =
+      geometry.height > 0 ? geometry.height : Int(CGFloat(screen.height) * pixelRatio)
 
     settingsAssistant.sourceVideoFormat = try CMVideoFormatDescription(
       videoCodecType: .hevc, width: width, height: height)
@@ -226,19 +233,31 @@ class Screen: NSObject, SCStreamOutput, Recordable {
       exceptingWindows: []
     )
 
-    let pixelPointScale = Int(contentFilter.pointPixelScale)
-
     let config = SCStreamConfiguration()
     config.queueDepth = 20
     config.showsCursor = showCursor
     config.capturesAudio = false
     config.backgroundColor = .white
 
-    // Set the width to twice the stated width (required for pixel ratio reasons)
-    // required to get colors to look right
-    // note: in the future, this **should not** be hard-coded
-    config.width = screen.width * pixelPointScale
-    config.height = screen.height * pixelPointScale
+    // Resolve framing and resolution once and cache it. `setupWriter` reads the same
+    // values, so the stream and the asset writer can never disagree about output size.
+    // Previously each computed dimensions independently — one from
+    // `contentFilter.pointPixelScale`, the other from `getPixelRatio(for:)` — which was
+    // only correct as long as those two agreed.
+    let resolved = resolveCaptureGeometry(
+      displayWidth: screen.width,
+      displayHeight: screen.height,
+      pixelScale: CGFloat(contentFilter.pointPixelScale)
+    )
+    self.geometry = resolved
+
+    // Crop to the chosen aspect ratio. Left unset, the whole display is captured.
+    if let sourceRect = resolved.sourceRect {
+      config.sourceRect = sourceRect
+    }
+
+    config.width = resolved.width
+    config.height = resolved.height
 
     // color settings
     // note: in display settings, you can set the color space. So, this should probably not be hard-coded either

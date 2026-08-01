@@ -72,7 +72,7 @@ to anyone who had ever touched the speed slider.
 Requires macOS 14 or later.
 
 ```bash
-git clone https://github.com/christianmauerer/timelapsr.git
+git clone https://github.com/lovepixel-git/timelapsr.git
 cd timelapsr
 open Timelapsr.xcodeproj
 ```

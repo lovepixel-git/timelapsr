@@ -16,7 +16,7 @@ class RecordVideo: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
 
   let callback: (CMSampleBuffer) -> Void
 
-  let captureQue = DispatchQueue(label: "dev.christianmauerer.Timelapsr")
+  let captureQue = DispatchQueue(label: "com.christianmauerer.Timelapsr")
 
   init(device: AVCaptureDevice, callback: @escaping (CMSampleBuffer) -> Void) {
     // Initializes the AVCaptureVideoDataOutputSampleBuffer Delegate

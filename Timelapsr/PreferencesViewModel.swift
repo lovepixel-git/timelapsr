@@ -18,6 +18,11 @@ class PreferencesViewModel: ObservableObject {
   @AppStorage("idleTimeout") var idleTimeout: Double = 0
   let validIdleTimeouts: [Double] = [0, 30, 60, 120, 300, 600]
 
+  /// Framing aspect ratio as width / height. `0` matches the display.
+  @AppStorage("aspectRatio") var aspectRatio: Double = AspectRatio.native
+  /// Maximum output long-edge in pixels. `0` keeps native resolution.
+  @AppStorage("resolutionCap") var resolutionCap: Int = 0
+
   @AppStorage("quality") var quality: QualitySettings = .medium
 
   @AppStorage("format") var format: AVFileType = baseConfig.validFormats.first!
