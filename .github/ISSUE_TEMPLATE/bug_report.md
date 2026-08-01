@@ -21,7 +21,7 @@ Steps to reproduce the behavior:
 If applicable, add screenshots to help explain your problem.
 
 **Crash Report**
-If you are reporting a crash, open up **Console** a default MacOS application. Navigate to "Crash Reports" and the find the latest "TimeLapze" crash report. Copy the full contents of the crash report and paste them below
+If you are reporting a crash, open up **Console** a default MacOS application. Navigate to "Crash Reports" and the find the latest "Timelapsr" crash report. Copy the full contents of the crash report and paste them below
 
  ```console
 

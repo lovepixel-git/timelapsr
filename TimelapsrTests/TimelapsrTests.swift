@@ -1,9 +1,9 @@
 import AVFoundation
 import XCTest
 
-@testable import TimeLapze
+@testable import Timelapsr
 
-final class TimeLapzeTests: XCTestCase {
+final class TimelapsrTests: XCTestCase {
   func testPerformanceExample() throws {
     // This is an example of a performance test case.
     measure {

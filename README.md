@@ -1,6 +1,6 @@
-<img alt="TimeLapze" src="https://github.com/wkaisertexas/ScreenTimeLapse/assets/27795014/d79916bd-e0d5-4da1-85ce-4bf95f0f44fb" />
+<img alt="Timelapsr" src="https://github.com/wkaisertexas/Timelapsr/assets/27795014/d79916bd-e0d5-4da1-85ce-4bf95f0f44fb" />
 
-<h1 align="center">TimeLapze</h1>
+<h1 align="center">Timelapsr</h1>
 
 <p align="center">
   A menu bar application for creating screen and camera timelapses while keeping file sizes manageable
@@ -19,15 +19,15 @@
 ## Introduction
 
 <p align="center">
-  <img width="553" alt="Application demonstration photo in menu bar" src="https://github.com/wkaisertexas/ScreenTimeLapse/assets/27795014/785ee2b6-1ef5-4302-83da-c3d81a069074">
+  <img width="553" alt="Application demonstration photo in menu bar" src="https://github.com/wkaisertexas/Timelapsr/assets/27795014/785ee2b6-1ef5-4302-83da-c3d81a069074">
 </p>
 
 <p align="center">
-  <i>TimeLapze</i> is a minimalist, menu bar application for creating color accurate screen and camera timelapses while keeping file sizes manageable
+  <i>Timelapsr</i> is a minimalist, menu bar application for creating color accurate screen and camera timelapses while keeping file sizes manageable
 </p>
 
 <p align="center">
-<img alt="color accurate comparison" src="https://github.com/wkaisertexas/ScreenTimeLapse/assets/27795014/ca37fa51-7851-4080-9e8c-f95f9ed529a8"></img>
+<img alt="color accurate comparison" src="https://github.com/wkaisertexas/Timelapsr/assets/27795014/ca37fa51-7851-4080-9e8c-f95f9ed529a8"></img>
 Color accuracy is an important feature which prevents you from recording washed-out, photocopied-looking time lapses
 </p>
 
@@ -47,35 +47,35 @@ Color accuracy is an important feature which prevents you from recording washed-
 ### App Store (Recommended)
 
 Get **Timelapse** on the App Store:  
-[Download on the App Store](https://apps.apple.com/us/app/timelapze/id6473860445)
+[Download on the App Store](https://apps.apple.com/us/app/timelapsr/id6473860445)
 
 ### Homebrew  
 
-Install **TimeLapze** via [Homebrew](https://brew.sh/):
+Install **Timelapsr** via [Homebrew](https://brew.sh/):
 
 ```bash
-brew install timelapze
+brew install timelapsr
 ```
 
 ### Direct Download  
 
-Download the latest version from the [Releases page](https://github.com/wkaisertexas/ScreenTimeLapse/releases).  
+Download the latest version from the [Releases page](https://github.com/wkaisertexas/Timelapsr/releases).  
 
-1. Download `TimeLapze.zip`
+1. Download `Timelapsr.zip`
 2. If Chrome or Safari warns about the file, ignore it
-3. Extract the archive to get `TimeLapze.app`
+3. Extract the archive to get `Timelapsr.app`
 4. Move it to your `Applications` folder
 
 ## Local Development
 
-To develop TimeLapze locally, you will need to clone and open this repository in XCode.
+To develop Timelapsr locally, you will need to clone and open this repository in XCode.
 
 Once that's done, you can use the following commands to run the app locally:
 
 ```console
-git clone https://github.com/wkaisertexas/ScreenTimeLapse
-cd ScreenTimeLapse
-open TimeLapze.xcodeproj
+git clone https://github.com/wkaisertexas/Timelapsr
+cd Timelapsr
+open Timelapsr.xcodeproj
 ```
 
 Following this, you need to allow the app to be built for local signing. 
@@ -91,11 +91,11 @@ Following this, you need to allow the app to be built for local signing.
 
 Contributions are welcome! Here's how you can contribute:
 
-- [Open an issue](https://github.com/wkaisertexas/ScreenTimeLapse/issues) if you believe you've encountered a bug
-- Submit a [pull request](https://github.com/wkaisertexas/ScreenTimeLapse/pull) to add features, improve usability, or fix bugs
+- [Open an issue](https://github.com/wkaisertexas/Timelapsr/issues) if you believe you've encountered a bug
+- Submit a [pull request](https://github.com/wkaisertexas/Timelapsr/pull) to add features, improve usability, or fix bugs
 
-<a href="https://github.com/wkaisertexas/ScreenTimeLapse/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wkaisertexas/ScreenTimeLapse" />
+<a href="https://github.com/wkaisertexas/Timelapsr/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wkaisertexas/Timelapsr" />
 </a>
 
 ## Repo Activity
@@ -104,7 +104,7 @@ Contributions are welcome! Here's how you can contribute:
 
 ## License
 
-TimeLapze is released under the [MIT License](LICENSE), ensuring open-source availability
+Timelapsr is released under the [MIT License](LICENSE), ensuring open-source availability
 
 > [!IMPORTANT]
 > If you liked this project, consider giving the repository a star ⭐️!

@@ -14,10 +14,10 @@ struct PreferencesView: View {
     TabView {
       generalSettings().tabItem {
         Label("General", systemImage: "gear")
-      }.navigationTitle("TimeLapze Settings")
+      }.navigationTitle("Timelapsr Settings")
       videoSettings().tabItem {
         Label("Video", systemImage: "video")
-      }.navigationTitle("TimeLapze Settings")
+      }.navigationTitle("Timelapsr Settings")
     }
     .frame(width: 450)
     .fixedSize()
@@ -26,7 +26,7 @@ struct PreferencesView: View {
 
   func generalSettings() -> some View {
     Form {
-      Text("TimeLapze General Settings")
+      Text("Timelapsr General Settings")
         .fontWeight(.semibold)
         .font(.headline)
 
@@ -39,7 +39,7 @@ struct PreferencesView: View {
 
   func videoSettings() -> some View {
     Form {
-      Text("TimeLapze Video Settings")
+      Text("Timelapsr Video Settings")
         .fontWeight(.semibold)
         .font(.headline)
 

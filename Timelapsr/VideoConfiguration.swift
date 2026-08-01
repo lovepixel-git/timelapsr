@@ -53,8 +53,8 @@ struct VideoConfiguration {
     .mov, .mp4,
   ]
 
-  let help = URL(string: "https://github.com/wkaisertexas/ScreenTimeLapse/issues")!
-  let about = URL(string: "https://github.com/wkaisertexas/ScreenTimeLapse")!
+  let help = URL(string: "https://github.com/wkaisertexas/Timelapsr/issues")!
+  let about = URL(string: "https://github.com/wkaisertexas/Timelapsr")!
 
   /// Constant quality threshold for recording video
   let quality = 0.85

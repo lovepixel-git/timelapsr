@@ -84,12 +84,12 @@ struct OnboardingView: View {
         switch viewModel.onWindow {
         case .introPage:
           card(
-            title: "Welcome to TimeLapze",
-            subtitle: "TimeLapze is a tool for creating screen and camera time lapses",
+            title: "Welcome to Timelapsr",
+            subtitle: "Timelapsr is a tool for creating screen and camera time lapses",
             image: "OnboardingIntro", index: 0)
         case .menuBarPage:
           card(
-            title: "TimeLapze lives in the menu bar",
+            title: "Timelapsr lives in the menu bar",
             subtitle:
               "Start, pause, resume, and save all of your recordings through the menu bar interface",
             image: "OnboardingMenuBar", index: 1)
@@ -110,7 +110,7 @@ struct OnboardingView: View {
             index: 4)
         case .getStarted:
           card(
-            title: "Get started creating TimeLapzes",
+            title: "Get started creating Timelapsrs",
             subtitle: "Recording are always color-accurate and crazy performant",
             image: "OnboardingGetStarted", index: 5)
         }

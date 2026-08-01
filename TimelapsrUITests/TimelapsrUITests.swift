@@ -1,13 +1,13 @@
 //
-//  TimeLapzeUITests.swift
-//  TimeLapzeUITests
+//  TimelapsrUITests.swift
+//  TimelapsrUITests
 //
 //  Created by William Kaiser on 11/21/24.
 //
 
 import XCTest
 
-final class TimeLapzeUITests: XCTestCase {
+final class TimelapsrUITests: XCTestCase {
 
   override func setUpWithError() throws {
     // Put setup code here. This method is called before the invocation of each test method in the class.

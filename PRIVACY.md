@@ -1,9 +1,9 @@
 
-Privacy Policy for TimeLapze
+Privacy Policy for Timelapsr
 
 Effective Date: December 6th, 2023
 
-TimeLapze, hereafter referred to as "we," "us," or "TimeLapze," respects your privacy and is committed to protecting any personal information that you may provide while using our MacOS application, TimeLapze, hereafter referred to as "the App." This Privacy Policy outlines our practices concerning the collection, use, and disclosure of your information.
+Timelapsr, hereafter referred to as "we," "us," or "Timelapsr," respects your privacy and is committed to protecting any personal information that you may provide while using our MacOS application, Timelapsr, hereafter referred to as "the App." This Privacy Policy outlines our practices concerning the collection, use, and disclosure of your information.
 
 Information We Do Not Collect:
 
@@ -38,4 +38,4 @@ If you have any questions or concerns about this Privacy Policy or the App's pri
 
 By using the App, you agree to the terms and conditions outlined in this Privacy Policy.
 
-Thank you for choosing TimeLapze!
+Thank you for choosing Timelapsr!

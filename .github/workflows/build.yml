@@ -19,8 +19,8 @@ jobs:
       - name: Build
         run: |
           xcodebuild build \
-            -project TimeLapze.xcodeproj \
-            -scheme ScreenTimeLapse \
+            -project Timelapsr.xcodeproj \
+            -scheme Timelapsr \
             -destination 'platform=macOS' \
             -skipPackagePluginValidation \
             CODE_SIGNING_ALLOWED=NO
@@ -28,9 +28,9 @@ jobs:
       - name: Unit Tests
         run: |
           xcodebuild test \
-            -project TimeLapze.xcodeproj \
+            -project Timelapsr.xcodeproj \
             -scheme Test \
             -destination 'platform=macOS' \
-            -only-testing:TimeLapzeTests \
+            -only-testing:TimelapsrTests \
             -skipPackagePluginValidation \
             CODE_SIGNING_ALLOWED=NO

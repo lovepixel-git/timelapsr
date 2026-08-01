@@ -2,7 +2,7 @@ import AVFoundation
 import ScreenCaptureKit
 import XCTest
 
-@testable import TimeLapze
+@testable import Timelapsr
 
 /// Testing the ``RecorderViewModel``
 final class RecorderViewModelTests: XCTestCase {

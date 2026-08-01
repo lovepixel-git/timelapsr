@@ -1,13 +1,13 @@
 //
-//  TimeLapzeUITestsLaunchTests.swift
-//  TimeLapzeUITests
+//  TimelapsrUITestsLaunchTests.swift
+//  TimelapsrUITests
 //
 //  Created by William Kaiser on 11/21/24.
 //
 
 import XCTest
 
-final class TimeLapzeUITestsLaunchTests: XCTestCase {
+final class TimelapsrUITestsLaunchTests: XCTestCase {
 
   //  override class var runsForEachTargetApplicationUIConfiguration: Bool {
   //    true

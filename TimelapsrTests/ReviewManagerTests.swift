@@ -1,7 +1,7 @@
 import SwiftUI
 import XCTest
 
-@testable import TimeLapze
+@testable import Timelapsr
 
 /// Does not ask for a review, just logs that it is called
 class ReviewManagerTestable: ReviewManager {

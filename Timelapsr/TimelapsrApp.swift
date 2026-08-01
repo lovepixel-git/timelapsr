@@ -4,8 +4,8 @@ import SwiftUI
 import UserNotifications
 
 @main
-struct TimeLapzeApp: App {
-  @NSApplicationDelegateAdaptor(TimeLapzeAppDelegate.self) var appDelegate
+struct TimelapsrApp: App {
+  @NSApplicationDelegateAdaptor(TimelapsrAppDelegate.self) var appDelegate
 
   // Top-Level View Model
   @ObservedObject var recorderViewModel = RecorderViewModel.shared
@@ -36,7 +36,7 @@ struct TimeLapzeApp: App {
       ContentView().environmentObject(recorderViewModel)
     } label: {
       Image(systemName: recorderViewModel.state.description).accessibilityLabel(
-        "ScreenTimeLapse MenuBar"
+        "Timelapsr MenuBar"
       ).accessibilityIdentifier("menuBarApp")
     }.onChange(of: recorderViewModel.state, initial: false) {
       Task {
@@ -48,7 +48,7 @@ struct TimeLapzeApp: App {
 
 /// General purpose `NSApplicationDelegate` and `UNUserNotificationCenterDelegate`
 /// Abstracts away custom features unable to be set in `info.plist` or any other config files
-class TimeLapzeAppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
+class TimelapsrAppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
   /// Triggered when the application finished launching and receives a launch notification `Notification` on the event
   func applicationDidFinishLaunching(_ notification: Notification) {
     // `@AppStorage` defaults (such as `timeMultiple = 5.0` in PreferencesViewModel) only

@@ -5107,84 +5107,84 @@
         }
       }
     },
-    "Get started creating TimeLapzes" : {
+    "Get started creating Timelapsrs" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ابدأ في إنشاء TimeLapzes"
+            "value" : "ابدأ في إنشاء Timelapsrs"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Comença a crear TimeLapzes"
+            "value" : "Comença a crear Timelapsrs"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Začněte vytvářet TimeLapze"
+            "value" : "Začněte vytvářet Timelapsr"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kom i gang med at skabe TimeLapzes"
+            "value" : "Kom i gang med at skabe Timelapsrs"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Beginnen Sie mit der Erstellung von TimeLapzes"
+            "value" : "Beginnen Sie mit der Erstellung von Timelapsrs"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ξεκινήστε τη δημιουργία TimeLapzes"
+            "value" : "Ξεκινήστε τη δημιουργία Timelapsrs"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Get started creating TimeLapzes"
+            "value" : "Get started creating Timelapsrs"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Get started creating TimeLapzes"
+            "value" : "Get started creating Timelapsrs"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Get started creating TimeLapzes"
+            "value" : "Get started creating Timelapsrs"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Get started creating TimeLapzes"
+            "value" : "Get started creating Timelapsrs"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Get started creating TimeLapzes"
+            "value" : "Get started creating Timelapsrs"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Empieza a crear TimeLapzes"
+            "value" : "Empieza a crear Timelapsrs"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Empieza a crear TimeLapzes"
+            "value" : "Empieza a crear Timelapsrs"
           }
         },
         "fi" : {
@@ -5196,157 +5196,157 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Commencez à créer des TimeLapzes"
+            "value" : "Commencez à créer des Timelapsrs"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Commencez à créer des TimeLapzes"
+            "value" : "Commencez à créer des Timelapsrs"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "התחל ליצור TimeLapzes"
+            "value" : "התחל ליצור Timelapsrs"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapzes बनाना शुरू करें"
+            "value" : "Timelapsrs बनाना शुरू करें"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Započnite stvaranje TimeLapzesa"
+            "value" : "Započnite stvaranje Timelapsrsa"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kezdje el a TimeLapzes létrehozását"
+            "value" : "Kezdje el a Timelapsrs létrehozását"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mulailah membuat TimeLapzes"
+            "value" : "Mulailah membuat Timelapsrs"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Inizia a creare TimeLapzes"
+            "value" : "Inizia a creare Timelapsrs"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapzesの作成を始めましょう"
+            "value" : "Timelapsrsの作成を始めましょう"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapzes 생성 시작"
+            "value" : "Timelapsrs 생성 시작"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mulakan mencipta TimeLapzes"
+            "value" : "Mulakan mencipta Timelapsrs"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kom i gang med å lage TimeLapzes"
+            "value" : "Kom i gang med å lage Timelapsrs"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Begin met het maken van TimeLapzes"
+            "value" : "Begin met het maken van Timelapsrs"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Zacznij tworzyć TimeLapzes"
+            "value" : "Zacznij tworzyć Timelapsrs"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Comece a criar TimeLapzes"
+            "value" : "Comece a criar Timelapsrs"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Comece a criar TimeLapzes"
+            "value" : "Comece a criar Timelapsrs"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Începeți să creați TimeLapzes"
+            "value" : "Începeți să creați Timelapsrs"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Начните создавать TimeLapzes"
+            "value" : "Начните создавать Timelapsrs"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Začnite vytvárať TimeLapze"
+            "value" : "Začnite vytvárať Timelapsr"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Kom igång med att skapa TimeLapzes"
+            "value" : "Kom igång med att skapa Timelapsrs"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "เริ่มต้นสร้าง TimeLapzes"
+            "value" : "เริ่มต้นสร้าง Timelapsrs"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapzes oluşturmaya başlayın"
+            "value" : "Timelapsrs oluşturmaya başlayın"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Почніть створювати TimeLapzes"
+            "value" : "Почніть створювати Timelapsrs"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bắt đầu tạo TimeLapzes"
+            "value" : "Bắt đầu tạo Timelapsrs"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "开始创建TimeLapzes"
+            "value" : "开始创建Timelapsrs"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "開始創建TimeLapzes"
+            "value" : "開始創建Timelapsrs"
           }
         }
       }
@@ -9747,108 +9747,108 @@
         }
       }
     },
-    "ScreenTimeLapse MenuBar" : {
+    "Timelapsr MenuBar" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "شريط القائمة ScreenTimeLapse"
+            "value" : "شريط القائمة Timelapsr"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barra de menú ScreenTimeLapse"
+            "value" : "Barra de menú Timelapsr"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse MenuBar"
+            "value" : "Timelapsr MenuBar"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse-menulinje"
+            "value" : "Timelapsr-menulinje"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse-Menüleiste"
+            "value" : "Timelapsr-Menüleiste"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Γραμμή μενού ScreenTimeLapse"
+            "value" : "Γραμμή μενού Timelapsr"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse MenuBar"
+            "value" : "Timelapsr MenuBar"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse MenuBar"
+            "value" : "Timelapsr MenuBar"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse MenuBar"
+            "value" : "Timelapsr MenuBar"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse MenuBar"
+            "value" : "Timelapsr MenuBar"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse MenuBar"
+            "value" : "Timelapsr MenuBar"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barra de menú ScreenTimeLapse"
+            "value" : "Barra de menú Timelapsr"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barra de menú ScreenTimeLapse"
+            "value" : "Barra de menú Timelapsr"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse-valikkopalkki"
+            "value" : "Timelapsr-valikkopalkki"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barre de menu ScreenTimeLapse"
+            "value" : "Barre de menu Timelapsr"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barre de menu ScreenTimeLapse"
+            "value" : "Barre de menu Timelapsr"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "סרגל התפריטים של ScreenTimeLapse"
+            "value" : "סרגל התפריטים של Timelapsr"
           }
         },
         "hi" : {
@@ -9860,133 +9860,133 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse izbornik"
+            "value" : "Timelapsr izbornik"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse menüsor"
+            "value" : "Timelapsr menüsor"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "MenuBar ScreenTimeLapse"
+            "value" : "MenuBar Timelapsr"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barra dei menu ScreenTimeLapse"
+            "value" : "Barra dei menu Timelapsr"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse メニューバー"
+            "value" : "Timelapsr メニューバー"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse 메뉴 모음"
+            "value" : "Timelapsr 메뉴 모음"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "MenuBar ScreenTimeLapse"
+            "value" : "MenuBar Timelapsr"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse menylinje"
+            "value" : "Timelapsr menylinje"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse menubalk"
+            "value" : "Timelapsr menubalk"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pasek menu ScreenTimeLapse"
+            "value" : "Pasek menu Timelapsr"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barra de menu ScreenTimeLapse"
+            "value" : "Barra de menu Timelapsr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Barra de menu ScreenTimeLapse"
+            "value" : "Barra de menu Timelapsr"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bară de meniu ScreenTimeLapse"
+            "value" : "Bară de meniu Timelapsr"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Панель меню ScreenTimeLapse"
+            "value" : "Панель меню Timelapsr"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Panela menu ScreenTimeLapse"
+            "value" : "Panela menu Timelapsr"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse-menyrad"
+            "value" : "Timelapsr-menyrad"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "แถบเมนู ScreenTimeLapse"
+            "value" : "แถบเมนู Timelapsr"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse Menü Çubuğu"
+            "value" : "Timelapsr Menü Çubuğu"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Панель меню ScreenTimeLapse"
+            "value" : "Панель меню Timelapsr"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thanh menu ScreenTimeLapse"
+            "value" : "Thanh menu Timelapsr"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse 菜单栏"
+            "value" : "Timelapsr 菜单栏"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ScreenTimeLapse 功能表列"
+            "value" : "Timelapsr 功能表列"
           }
         }
       }
@@ -11703,596 +11703,596 @@
         }
       }
     },
-    "TimeLapze General Settings" : {
+    "Timelapsr General Settings" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إعدادات TimeLapze العامة"
+            "value" : "إعدادات Timelapsr العامة"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuració General de TimeLapze"
+            "value" : "Configuració General de Timelapsr"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Obecná nastavení TimeLapze"
+            "value" : "Obecná nastavení Timelapsr"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Generelle Indstillinger"
+            "value" : "Timelapsr Generelle Indstillinger"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Allgemeine Einstellungen für TimeLapze"
+            "value" : "Allgemeine Einstellungen für Timelapsr"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Γενικές Ρυθμίσεις TimeLapze"
+            "value" : "Γενικές Ρυθμίσεις Timelapsr"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze General Settings"
+            "value" : "Timelapsr General Settings"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze General Settings"
+            "value" : "Timelapsr General Settings"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze General Settings"
+            "value" : "Timelapsr General Settings"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze General Settings"
+            "value" : "Timelapsr General Settings"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze General Settings"
+            "value" : "Timelapsr General Settings"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuración General de TimeLapze"
+            "value" : "Configuración General de Timelapsr"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuración General de TimeLapze"
+            "value" : "Configuración General de Timelapsr"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Yleiset Asetukset"
+            "value" : "Timelapsr Yleiset Asetukset"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres Généraux de TimeLapze"
+            "value" : "Paramètres Généraux de Timelapsr"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres Généraux de TimeLapze"
+            "value" : "Paramètres Généraux de Timelapsr"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הגדרות כלליות של TimeLapze"
+            "value" : "הגדרות כלליות של Timelapsr"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze सामान्य सेटिंग्स"
+            "value" : "Timelapsr सामान्य सेटिंग्स"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Opće postavke TimeLapze-a"
+            "value" : "Opće postavke Timelapsr-a"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Általános Beállítások"
+            "value" : "Timelapsr Általános Beállítások"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pengaturan Umum TimeLapze"
+            "value" : "Pengaturan Umum Timelapsr"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impostazioni Generali di TimeLapze"
+            "value" : "Impostazioni Generali di Timelapsr"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 一般設定"
+            "value" : "Timelapsr 一般設定"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 일반 설정"
+            "value" : "Timelapsr 일반 설정"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tetapan Umum TimeLapze"
+            "value" : "Tetapan Umum Timelapsr"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Generelle Innstillinger"
+            "value" : "Timelapsr Generelle Innstillinger"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Algemene Instellingen"
+            "value" : "Timelapsr Algemene Instellingen"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ustawienia Ogólne TimeLapze"
+            "value" : "Ustawienia Ogólne Timelapsr"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações Gerais do TimeLapze"
+            "value" : "Configurações Gerais do Timelapsr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações Gerais do TimeLapze"
+            "value" : "Configurações Gerais do Timelapsr"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setări Generale TimeLapze"
+            "value" : "Setări Generale Timelapsr"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Общие настройки TimeLapze"
+            "value" : "Общие настройки Timelapsr"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Všeobecné nastavenia TimeLapze"
+            "value" : "Všeobecné nastavenia Timelapsr"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Allmänna Inställningar"
+            "value" : "Timelapsr Allmänna Inställningar"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "การตั้งค่าทั่วไปของ TimeLapze"
+            "value" : "การตั้งค่าทั่วไปของ Timelapsr"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Genel Ayarlar"
+            "value" : "Timelapsr Genel Ayarlar"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Загальні налаштування TimeLapze"
+            "value" : "Загальні налаштування Timelapsr"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cài Đặt Chung của TimeLapze"
+            "value" : "Cài Đặt Chung của Timelapsr"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 常规设置"
+            "value" : "Timelapsr 常规设置"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 常規設置"
+            "value" : "Timelapsr 常規設置"
           }
         }
       }
     },
-    "TimeLapze is a tool for creating screen and camera time lapses" : {
+    "Timelapsr is a tool for creating screen and camera time lapses" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze هو أداة لإنشاء تسجيلات فاصل زمني للشاشة والكاميرا"
+            "value" : "Timelapsr هو أداة لإنشاء تسجيلات فاصل زمني للشاشة والكاميرا"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze és una eina per crear time lapses de pantalla i càmera"
+            "value" : "Timelapsr és una eina per crear time lapses de pantalla i càmera"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze je nástroj pro vytváření časosběrných videí obrazovky a fotoaparátu"
+            "value" : "Timelapsr je nástroj pro vytváření časosběrných videí obrazovky a fotoaparátu"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze er et værktøj til at skabe skærm- og kamera time lapses"
+            "value" : "Timelapsr er et værktøj til at skabe skærm- og kamera time lapses"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze ist ein Werkzeug zum Erstellen von Bildschirm- und Kamerazeitraffern"
+            "value" : "Timelapsr ist ein Werkzeug zum Erstellen von Bildschirm- und Kamerazeitraffern"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Το TimeLapze είναι ένα εργαλείο για τη δημιουργία χρονικών διαστημάτων οθόνης και κάμερας"
+            "value" : "Το Timelapsr είναι ένα εργαλείο για τη δημιουργία χρονικών διαστημάτων οθόνης και κάμερας"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze is a tool for creating screen and camera time lapses"
+            "value" : "Timelapsr is a tool for creating screen and camera time lapses"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze is a tool for creating screen and camera time lapses"
+            "value" : "Timelapsr is a tool for creating screen and camera time lapses"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze is a tool for creating screen and camera time lapses"
+            "value" : "Timelapsr is a tool for creating screen and camera time lapses"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze is a tool for creating screen and camera time lapses"
+            "value" : "Timelapsr is a tool for creating screen and camera time lapses"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze is a tool for creating screen and camera time lapses"
+            "value" : "Timelapsr is a tool for creating screen and camera time lapses"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze es una herramienta para crear time-lapses de pantalla y cámara"
+            "value" : "Timelapsr es una herramienta para crear time-lapses de pantalla y cámara"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze es una herramienta para crear time-lapses de pantalla y cámara"
+            "value" : "Timelapsr es una herramienta para crear time-lapses de pantalla y cámara"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze on työkalu näytön ja kameran aikaotoksien luomiseen"
+            "value" : "Timelapsr on työkalu näytön ja kameran aikaotoksien luomiseen"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze est un outil pour créer des time-lapses d'écran et de caméra"
+            "value" : "Timelapsr est un outil pour créer des time-lapses d'écran et de caméra"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze est un outil pour créer des time-lapses d'écran et de caméra"
+            "value" : "Timelapsr est un outil pour créer des time-lapses d'écran et de caméra"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze הוא כלי ליצירת צילומי מסך ומצלמה בהילוך מהיר"
+            "value" : "Timelapsr הוא כלי ליצירת צילומי מסך ומצלמה בהילוך מהיר"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze एक उपकरण है जो स्क्रीन और कैमरा टाइम लैप्स बनाने के लिए"
+            "value" : "Timelapsr एक उपकरण है जो स्क्रीन और कैमरा टाइम लैप्स बनाने के लिए"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze je alat za izradu vremenskih intervala zaslona i kamere"
+            "value" : "Timelapsr je alat za izradu vremenskih intervala zaslona i kamere"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A TimeLapze egy eszköz képernyő- és kamerafelvételek készítéséhez"
+            "value" : "A Timelapsr egy eszköz képernyő- és kamerafelvételek készítéséhez"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze adalah alat untuk membuat time lapse layar dan kamera"
+            "value" : "Timelapsr adalah alat untuk membuat time lapse layar dan kamera"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze è uno strumento per creare time-lapse dello schermo e della fotocamera"
+            "value" : "Timelapsr è uno strumento per creare time-lapse dello schermo e della fotocamera"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapzeは、画面とカメラのタイムラプスを作成するツールです"
+            "value" : "Timelapsrは、画面とカメラのタイムラプスを作成するツールです"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze는 화면 및 카메라 타임랩스를 생성하는 도구입니다"
+            "value" : "Timelapsr는 화면 및 카메라 타임랩스를 생성하는 도구입니다"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze adalah alat untuk membuat rakaman masa skrin dan kamera"
+            "value" : "Timelapsr adalah alat untuk membuat rakaman masa skrin dan kamera"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze er et verktøy for å lage tidsforløp av skjerm og kamera"
+            "value" : "Timelapsr er et verktøy for å lage tidsforløp av skjerm og kamera"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze is een hulpmiddel voor het maken van time-lapse video's van het scherm en de camera"
+            "value" : "Timelapsr is een hulpmiddel voor het maken van time-lapse video's van het scherm en de camera"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze to narzędzie do tworzenia filmów poklatkowych z ekranu i kamery"
+            "value" : "Timelapsr to narzędzie do tworzenia filmów poklatkowych z ekranu i kamery"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze é uma ferramenta para criar time lapses de tela e câmera"
+            "value" : "Timelapsr é uma ferramenta para criar time lapses de tela e câmera"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze é uma ferramenta para criar time lapses de ecrã e câmara"
+            "value" : "Timelapsr é uma ferramenta para criar time lapses de ecrã e câmara"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze este un instrument pentru crearea de time-lapse-uri de ecran și cameră"
+            "value" : "Timelapsr este un instrument pentru crearea de time-lapse-uri de ecran și cameră"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze — это инструмент для создания таймлапсов экрана и камеры"
+            "value" : "Timelapsr — это инструмент для создания таймлапсов экрана и камеры"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze je nástroj na vytváranie časozberných snímok obrazovky a kamery"
+            "value" : "Timelapsr je nástroj na vytváranie časozberných snímok obrazovky a kamery"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze är ett verktyg för att skapa tidssammandrag av skärm och kamera"
+            "value" : "Timelapsr är ett verktyg för att skapa tidssammandrag av skärm och kamera"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze เป็นเครื่องมือสำหรับสร้างภาพเคลื่อนไหวแบบ time lapse ของหน้าจอและกล้องถ่ายรูป"
+            "value" : "Timelapsr เป็นเครื่องมือสำหรับสร้างภาพเคลื่อนไหวแบบ time lapse ของหน้าจอและกล้องถ่ายรูป"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze, ekran ve kamera zaman atlamalı çekimleri oluşturmak için bir araçtır"
+            "value" : "Timelapsr, ekran ve kamera zaman atlamalı çekimleri oluşturmak için bir araçtır"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze — це інструмент для створення таймлапсів екрану та камери"
+            "value" : "Timelapsr — це інструмент для створення таймлапсів екрану та камери"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze là một công cụ để tạo các video tua nhanh thời gian từ màn hình và camera"
+            "value" : "Timelapsr là một công cụ để tạo các video tua nhanh thời gian từ màn hình và camera"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 是一个用于创建屏幕和相机延时摄影的工具"
+            "value" : "Timelapsr 是一个用于创建屏幕和相机延时摄影的工具"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 是一個用於創建屏幕和攝像機延時攝影的工具"
+            "value" : "Timelapsr 是一個用於創建屏幕和攝像機延時攝影的工具"
           }
         }
       }
     },
-    "TimeLapze lives in the menu bar" : {
+    "Timelapsr lives in the menu bar" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "يعيش TimeLapze في شريط القائمة"
+            "value" : "يعيش Timelapsr في شريط القائمة"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze viu a la barra de menú"
+            "value" : "Timelapsr viu a la barra de menú"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze je umístěn v menu baru"
+            "value" : "Timelapsr je umístěn v menu baru"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze bor i menulinjen"
+            "value" : "Timelapsr bor i menulinjen"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze befindet sich in der Menüleiste"
+            "value" : "Timelapsr befindet sich in der Menüleiste"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Το TimeLapze βρίσκεται στη γραμμή μενού"
+            "value" : "Το Timelapsr βρίσκεται στη γραμμή μενού"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze lives in the menu bar"
+            "value" : "Timelapsr lives in the menu bar"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze lives in the menu bar"
+            "value" : "Timelapsr lives in the menu bar"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze lives in the menu bar"
+            "value" : "Timelapsr lives in the menu bar"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze lives in the menu bar"
+            "value" : "Timelapsr lives in the menu bar"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze lives in the menu bar"
+            "value" : "Timelapsr lives in the menu bar"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze se encuentra en la barra de menú"
+            "value" : "Timelapsr se encuentra en la barra de menú"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze se encuentra en la barra de menú"
+            "value" : "Timelapsr se encuentra en la barra de menú"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze sijaitsee valikkopalkissa"
+            "value" : "Timelapsr sijaitsee valikkopalkissa"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze se trouve dans la barre de menu"
+            "value" : "Timelapsr se trouve dans la barre de menu"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze se trouve dans la barre de menu"
+            "value" : "Timelapsr se trouve dans la barre de menu"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze נמצא בשורת התפריטים"
+            "value" : "Timelapsr נמצא בשורת התפריטים"
           }
         },
         "hi" : {
@@ -12304,621 +12304,621 @@
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze se nalazi u traci izbornika"
+            "value" : "Timelapsr se nalazi u traci izbornika"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "A TimeLapze a menüsorban található"
+            "value" : "A Timelapsr a menüsorban található"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze berada di bar menu"
+            "value" : "Timelapsr berada di bar menu"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze si trova nella barra dei menu"
+            "value" : "Timelapsr si trova nella barra dei menu"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze はメニューバーにあります"
+            "value" : "Timelapsr はメニューバーにあります"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze는 메뉴 막대에 있습니다"
+            "value" : "Timelapsr는 메뉴 막대에 있습니다"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze terletak di bar menu"
+            "value" : "Timelapsr terletak di bar menu"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze ligger i menylinjen"
+            "value" : "Timelapsr ligger i menylinjen"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze bevindt zich in de menubalk"
+            "value" : "Timelapsr bevindt zich in de menubalk"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze znajduje się na pasku menu"
+            "value" : "Timelapsr znajduje się na pasku menu"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze fica na barra de menu"
+            "value" : "Timelapsr fica na barra de menu"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze está na barra de menu"
+            "value" : "Timelapsr está na barra de menu"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze se află în bara de meniu"
+            "value" : "Timelapsr se află în bara de meniu"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze находится в строке меню"
+            "value" : "Timelapsr находится в строке меню"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze je umiestnený v lište menu"
+            "value" : "Timelapsr je umiestnený v lište menu"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze finns i menyraden"
+            "value" : "Timelapsr finns i menyraden"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze อยู่ในแถบเมนู"
+            "value" : "Timelapsr อยู่ในแถบเมนู"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze menü çubuğunda bulunur"
+            "value" : "Timelapsr menü çubuğunda bulunur"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze знаходиться в рядку меню"
+            "value" : "Timelapsr знаходиться в рядку меню"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze nằm trong thanh menu"
+            "value" : "Timelapsr nằm trong thanh menu"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 位于菜单栏"
+            "value" : "Timelapsr 位于菜单栏"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 位於選單欄"
+            "value" : "Timelapsr 位於選單欄"
           }
         }
       }
     },
-    "TimeLapze Settings" : {
+    "Timelapsr Settings" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إعدادات TimeLapze"
+            "value" : "إعدادات Timelapsr"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuració de TimeLapze"
+            "value" : "Configuració de Timelapsr"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nastavení TimeLapze"
+            "value" : "Nastavení Timelapsr"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze-indstillinger"
+            "value" : "Timelapsr-indstillinger"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze-Einstellungen"
+            "value" : "Timelapsr-Einstellungen"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ρυθμίσεις TimeLapze"
+            "value" : "Ρυθμίσεις Timelapsr"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Settings"
+            "value" : "Timelapsr Settings"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Settings"
+            "value" : "Timelapsr Settings"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Settings"
+            "value" : "Timelapsr Settings"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Settings"
+            "value" : "Timelapsr Settings"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Settings"
+            "value" : "Timelapsr Settings"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuraciones de TimeLapze"
+            "value" : "Configuraciones de Timelapsr"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuraciones de TimeLapze"
+            "value" : "Configuraciones de Timelapsr"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze-asetukset"
+            "value" : "Timelapsr-asetukset"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres de TimeLapze"
+            "value" : "Paramètres de Timelapsr"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres de TimeLapze"
+            "value" : "Paramètres de Timelapsr"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הגדרות TimeLapze"
+            "value" : "הגדרות Timelapsr"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze सेटिंग्स"
+            "value" : "Timelapsr सेटिंग्स"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Postavke TimeLapze"
+            "value" : "Postavke Timelapsr"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze beállítások"
+            "value" : "Timelapsr beállítások"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pengaturan TimeLapze"
+            "value" : "Pengaturan Timelapsr"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impostazioni di TimeLapze"
+            "value" : "Impostazioni di Timelapsr"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 設定"
+            "value" : "Timelapsr 設定"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 설정"
+            "value" : "Timelapsr 설정"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tetapan TimeLapze"
+            "value" : "Tetapan Timelapsr"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze-innstillinger"
+            "value" : "Timelapsr-innstillinger"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze-instellingen"
+            "value" : "Timelapsr-instellingen"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ustawienia TimeLapze"
+            "value" : "Ustawienia Timelapsr"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações do TimeLapze"
+            "value" : "Configurações do Timelapsr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações do TimeLapze"
+            "value" : "Configurações do Timelapsr"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setări TimeLapze"
+            "value" : "Setări Timelapsr"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Настройки TimeLapze"
+            "value" : "Настройки Timelapsr"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nastavenia TimeLapze"
+            "value" : "Nastavenia Timelapsr"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze-inställningar"
+            "value" : "Timelapsr-inställningar"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "การตั้งค่า TimeLapze"
+            "value" : "การตั้งค่า Timelapsr"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Ayarları"
+            "value" : "Timelapsr Ayarları"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Налаштування TimeLapze"
+            "value" : "Налаштування Timelapsr"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cài đặt TimeLapze"
+            "value" : "Cài đặt Timelapsr"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 设置"
+            "value" : "Timelapsr 设置"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 設定"
+            "value" : "Timelapsr 設定"
           }
         }
       }
     },
-    "TimeLapze Video Settings" : {
+    "Timelapsr Video Settings" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "إعدادات فيديو TimeLapze"
+            "value" : "إعدادات فيديو Timelapsr"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuració de vídeo de TimeLapze"
+            "value" : "Configuració de vídeo de Timelapsr"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nastavení videa TimeLapze"
+            "value" : "Nastavení videa Timelapsr"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze videoindstillinger"
+            "value" : "Timelapsr videoindstillinger"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Videoeinstellungen"
+            "value" : "Timelapsr Videoeinstellungen"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ρυθμίσεις βίντεο TimeLapze"
+            "value" : "Ρυθμίσεις βίντεο Timelapsr"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Video Settings"
+            "value" : "Timelapsr Video Settings"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Video Settings"
+            "value" : "Timelapsr Video Settings"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Video Settings"
+            "value" : "Timelapsr Video Settings"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Video Settings"
+            "value" : "Timelapsr Video Settings"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Video Settings"
+            "value" : "Timelapsr Video Settings"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuración de vídeo de TimeLapze"
+            "value" : "Configuración de vídeo de Timelapsr"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configuración de video de TimeLapze"
+            "value" : "Configuración de video de Timelapsr"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze-videon asetukset"
+            "value" : "Timelapsr-videon asetukset"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres vidéo de TimeLapze"
+            "value" : "Paramètres vidéo de Timelapsr"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Paramètres vidéo de TimeLapze"
+            "value" : "Paramètres vidéo de Timelapsr"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הגדרות וידאו של TimeLapze"
+            "value" : "הגדרות וידאו של Timelapsr"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze वीडियो सेटिंग्स"
+            "value" : "Timelapsr वीडियो सेटिंग्स"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Postavke videa za TimeLapze"
+            "value" : "Postavke videa za Timelapsr"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze videóbeállítások"
+            "value" : "Timelapsr videóbeállítások"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pengaturan Video TimeLapze"
+            "value" : "Pengaturan Video Timelapsr"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impostazioni video di TimeLapze"
+            "value" : "Impostazioni video di Timelapsr"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapzeビデオ設定"
+            "value" : "Timelapsrビデオ設定"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 비디오 설정"
+            "value" : "Timelapsr 비디오 설정"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tetapan Video TimeLapze"
+            "value" : "Tetapan Video Timelapsr"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze videoinnstillinger"
+            "value" : "Timelapsr videoinnstillinger"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze video-instellingen"
+            "value" : "Timelapsr video-instellingen"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ustawienia wideo TimeLapze"
+            "value" : "Ustawienia wideo Timelapsr"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações de vídeo do TimeLapze"
+            "value" : "Configurações de vídeo do Timelapsr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Configurações de vídeo do TimeLapze"
+            "value" : "Configurações de vídeo do Timelapsr"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setări video TimeLapze"
+            "value" : "Setări video Timelapsr"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Настройки видео TimeLapze"
+            "value" : "Настройки видео Timelapsr"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nastavenia videa TimeLapze"
+            "value" : "Nastavenia videa Timelapsr"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze videoinställningar"
+            "value" : "Timelapsr videoinställningar"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "การตั้งค่าวิดีโอ TimeLapze"
+            "value" : "การตั้งค่าวิดีโอ Timelapsr"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze Video Ayarları"
+            "value" : "Timelapsr Video Ayarları"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Налаштування відео TimeLapze"
+            "value" : "Налаштування відео Timelapsr"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cài đặt video TimeLapze"
+            "value" : "Cài đặt video Timelapsr"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 视频设置"
+            "value" : "Timelapsr 视频设置"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze 視頻設置"
+            "value" : "Timelapsr 視頻設置"
           }
         }
       }
@@ -13411,246 +13411,246 @@
         }
       }
     },
-    "Welcome to TimeLapze" : {
+    "Welcome to Timelapsr" : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "مرحبًا بك في TimeLapze"
+            "value" : "مرحبًا بك في Timelapsr"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Benvingut a TimeLapze"
+            "value" : "Benvingut a Timelapsr"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vítejte v TimeLapze"
+            "value" : "Vítejte v Timelapsr"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velkommen til TimeLapze"
+            "value" : "Velkommen til Timelapsr"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Willkommen bei TimeLapze"
+            "value" : "Willkommen bei Timelapsr"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Καλώς ήρθατε στο TimeLapze"
+            "value" : "Καλώς ήρθατε στο Timelapsr"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welcome to TimeLapze"
+            "value" : "Welcome to Timelapsr"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welcome to TimeLapze"
+            "value" : "Welcome to Timelapsr"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welcome to TimeLapze"
+            "value" : "Welcome to Timelapsr"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welcome to TimeLapze"
+            "value" : "Welcome to Timelapsr"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welcome to TimeLapze"
+            "value" : "Welcome to Timelapsr"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bienvenido a TimeLapze"
+            "value" : "Bienvenido a Timelapsr"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bienvenido a TimeLapze"
+            "value" : "Bienvenido a Timelapsr"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tervetuloa TimeLapzeen"
+            "value" : "Tervetuloa Timelapsren"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bienvenue sur TimeLapze"
+            "value" : "Bienvenue sur Timelapsr"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bienvenue à TimeLapze"
+            "value" : "Bienvenue à Timelapsr"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ברוך הבא ל-TimeLapze"
+            "value" : "ברוך הבא ל-Timelapsr"
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze में आपका स्वागत है"
+            "value" : "Timelapsr में आपका स्वागत है"
           }
         },
         "hr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dobrodošli u TimeLapze"
+            "value" : "Dobrodošli u Timelapsr"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Üdvözöljük a TimeLapze alkalmazásban"
+            "value" : "Üdvözöljük a Timelapsr alkalmazásban"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Selamat datang di TimeLapze"
+            "value" : "Selamat datang di Timelapsr"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Benvenuto su TimeLapze"
+            "value" : "Benvenuto su Timelapsr"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapzeへようこそ"
+            "value" : "Timelapsrへようこそ"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze에 오신 것을 환영합니다"
+            "value" : "Timelapsr에 오신 것을 환영합니다"
           }
         },
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Selamat datang ke TimeLapze"
+            "value" : "Selamat datang ke Timelapsr"
           }
         },
         "nb" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Velkommen til TimeLapze"
+            "value" : "Velkommen til Timelapsr"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Welkom bij TimeLapze"
+            "value" : "Welkom bij Timelapsr"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Witamy w TimeLapze"
+            "value" : "Witamy w Timelapsr"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bem-vindo ao TimeLapze"
+            "value" : "Bem-vindo ao Timelapsr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bem-vindo ao TimeLapze"
+            "value" : "Bem-vindo ao Timelapsr"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bun venit la TimeLapze"
+            "value" : "Bun venit la Timelapsr"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Добро пожаловать в TimeLapze"
+            "value" : "Добро пожаловать в Timelapsr"
           }
         },
         "sk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Vitajte v TimeLapze"
+            "value" : "Vitajte v Timelapsr"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Välkommen till TimeLapze"
+            "value" : "Välkommen till Timelapsr"
           }
         },
         "th" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ยินดีต้อนรับสู่ TimeLapze"
+            "value" : "ยินดีต้อนรับสู่ Timelapsr"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze'ye hoş geldiniz"
+            "value" : "Timelapsr'ye hoş geldiniz"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ласкаво просимо до TimeLapze"
+            "value" : "Ласкаво просимо до Timelapsr"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Chào mừng đến với TimeLapze"
+            "value" : "Chào mừng đến với Timelapsr"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "欢迎使用 TimeLapze"
+            "value" : "欢迎使用 Timelapsr"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "歡迎使用 TimeLapze"
+            "value" : "歡迎使用 Timelapsr"
           }
         }
       }

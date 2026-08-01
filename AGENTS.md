@@ -1,18 +1,18 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-`TimeLapze/` contains the macOS SwiftUI app source (recording logic, models, views, assets, and localization files).  
-`TimeLapzeTests/` contains XCTest unit tests for app logic.  
-`TimeLapzeUITests/` contains UI tests.  
-`TimeLapze.xcodeproj/` holds project settings and shared schemes (`ScreenTimeLapse`, `Test`).  
-Repo-level tooling/config includes `.swift-format` (format rules), `typos.toml` (spelling checks), and `timelapze.rb` (Homebrew cask metadata).
+`Timelapsr/` contains the macOS SwiftUI app source (recording logic, models, views, assets, and localization files).  
+`TimelapsrTests/` contains XCTest unit tests for app logic.  
+`TimelapsrUITests/` contains UI tests.  
+`Timelapsr.xcodeproj/` holds project settings and shared schemes (`Timelapsr`, `Test`).  
+Repo-level tooling/config includes `.swift-format` (format rules), `typos.toml` (spelling checks), and `timelapsr.rb` (Homebrew cask metadata).
 
 ## Build, Test, and Development Commands
-- `open TimeLapze.xcodeproj`: Open the project in Xcode for local development.
-- `xcodebuild -list -project TimeLapze.xcodeproj`: Show targets and schemes.
-- `xcodebuild build -project TimeLapze.xcodeproj -scheme ScreenTimeLapse -destination 'platform=macOS'`: CLI build for the app.
-- `xcodebuild test -project TimeLapze.xcodeproj -scheme Test -destination 'platform=macOS'`: Run unit/UI tests from CLI (requires valid local signing setup).
-- `swift format --in-place --recursive TimeLapze TimeLapzeTests TimeLapzeUITests`: Apply formatter rules from `.swift-format`.
+- `open Timelapsr.xcodeproj`: Open the project in Xcode for local development.
+- `xcodebuild -list -project Timelapsr.xcodeproj`: Show targets and schemes.
+- `xcodebuild build -project Timelapsr.xcodeproj -scheme Timelapsr -destination 'platform=macOS'`: CLI build for the app.
+- `xcodebuild test -project Timelapsr.xcodeproj -scheme Test -destination 'platform=macOS'`: Run unit/UI tests from CLI (requires valid local signing setup).
+- `swift format --in-place --recursive Timelapsr TimelapsrTests TimelapsrUITests`: Apply formatter rules from `.swift-format`.
 - `typos`: Run typo checks using `typos.toml`.
 
 ## Coding Style & Naming Conventions
@@ -27,7 +27,7 @@ Name test files as `<Subject>Tests.swift` and test methods as `test<BehaviorOrSc
 Add tests alongside feature changes, including at least one edge/failure-path assertion for non-trivial logic.
 
 ## Commit & Pull Request Guidelines
-Recent commits favor short, imperative summaries, sometimes with an issue/PR reference (for example, `Update timelapze.rb` or `Updating readme (#62)`).  
+Recent commits favor short, imperative summaries, sometimes with an issue/PR reference (for example, `Update timelapsr.rb` or `Updating readme (#62)`).  
 Keep commits focused to one logical change.  
 PRs should include:
 - A clear description of what changed and why.

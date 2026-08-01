@@ -13,7 +13,7 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "cs" : {
@@ -43,43 +43,43 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "fi" : {
@@ -91,13 +91,13 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "he" : {
@@ -133,7 +133,7 @@
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "ja" : {
@@ -175,13 +175,13 @@
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "ro" : {
@@ -258,7 +258,7 @@
         "ca" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "cs" : {
@@ -270,7 +270,7 @@
         "da" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "de" : {
@@ -288,43 +288,43 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-AU" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "en-US" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "es-MX" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "fi" : {
@@ -336,13 +336,13 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "fr-CA" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "he" : {
@@ -372,13 +372,13 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "ja" : {
@@ -396,7 +396,7 @@
         "ms" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "nb" : {
@@ -414,25 +414,25 @@
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "ru" : {
@@ -450,7 +450,7 @@
         "sv" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "TimeLapze"
+            "value" : "Timelapsr"
           }
         },
         "th" : {

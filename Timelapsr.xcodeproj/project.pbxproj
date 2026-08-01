@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3E0DCD742BAB2A5800DB969A /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0DCD732BAB2A5800DB969A /* ReviewManager.swift */; };
-		3E23A01E2B2FC65A0016DE8C /* TimeLapzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E23A01D2B2FC65A0016DE8C /* TimeLapzeTests.swift */; };
+		3E23A01E2B2FC65A0016DE8C /* TimelapsrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E23A01D2B2FC65A0016DE8C /* TimelapsrTests.swift */; };
 		3E4D87C729AD741800D3EC7B /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D87C629AD741800D3EC7B /* Screen.swift */; };
 		3E4D87C929AD744C00D3EC7B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D87C829AD744C00D3EC7B /* Camera.swift */; };
 		3E5130E02BA34FE500A628EB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5130DF2BA34FE500A628EB /* OnboardingView.swift */; };
 		3E61935B2A2EC12200333918 /* VideoConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E61935A2A2EC12200333918 /* VideoConfiguration.swift */; };
-		3E650BE52CEFC5F500AE9F6C /* TimeLapzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E650BE42CEFC5F500AE9F6C /* TimeLapzeUITests.swift */; };
-		3E650BE72CEFC5F500AE9F6C /* TimeLapzeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E650BE62CEFC5F500AE9F6C /* TimeLapzeUITestsLaunchTests.swift */; };
+		3E650BE52CEFC5F500AE9F6C /* TimelapsrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E650BE42CEFC5F500AE9F6C /* TimelapsrUITests.swift */; };
+		3E650BE72CEFC5F500AE9F6C /* TimelapsrUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E650BE62CEFC5F500AE9F6C /* TimelapsrUITestsLaunchTests.swift */; };
 		3E7461022CEE8A9700F8511D /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3E7461012CEE8A9700F8511D /* InfoPlist.xcstrings */; };
 		3E7461042CEFC09400F8511D /* RecorderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7461032CEFC08B00F8511D /* RecorderViewModelTests.swift */; };
 		3E75E34C2AED6EC90016EB52 /* CameraRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75E34B2AED6EC90016EB52 /* CameraRecorder.swift */; };
@@ -27,7 +27,7 @@
 		3E9894D12A2ED44600C25059 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9894D02A2ED44600C25059 /* Logger.swift */; };
 		3EA255A62BADF2B70018FF63 /* SettingsAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 3EA255A52BADF2B70018FF63 /* SettingsAccess */; };
 		3EAB1AFD2BA8A33300BEC597 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAB1AFC2BA8A33300BEC597 /* OnboardingViewModel.swift */; };
-		3EE5FE0D296232C700768BF7 /* TimeLapzeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5FE0C296232C700768BF7 /* TimeLapzeApp.swift */; };
+		3EE5FE0D296232C700768BF7 /* TimelapsrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5FE0C296232C700768BF7 /* TimelapsrApp.swift */; };
 		3EE5FE0F296232C700768BF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE5FE0E296232C700768BF7 /* ContentView.swift */; };
 		3EE5FE11296232C800768BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE5FE10296232C800768BF7 /* Assets.xcassets */; };
 		3EE5FE14296232C800768BF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE5FE13296232C800768BF7 /* Preview Assets.xcassets */; };
@@ -40,30 +40,30 @@
 			containerPortal = 3EE5FE01296232C700768BF7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3EE5FE08296232C700768BF7;
-			remoteInfo = TimeLapze;
+			remoteInfo = Timelapsr;
 		};
 		3E650BE82CEFC5F500AE9F6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3EE5FE01296232C700768BF7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3EE5FE08296232C700768BF7;
-			remoteInfo = TimeLapze;
+			remoteInfo = Timelapsr;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3E0DCD732BAB2A5800DB969A /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
-		3E23A01B2B2FC65A0016DE8C /* TimeLapzeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLapzeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E23A01D2B2FC65A0016DE8C /* TimeLapzeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLapzeTests.swift; sourceTree = "<group>"; };
+		3E23A01B2B2FC65A0016DE8C /* TimelapsrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelapsrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E23A01D2B2FC65A0016DE8C /* TimelapsrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelapsrTests.swift; sourceTree = "<group>"; };
 		3E2EB6A429AD5A4C006F4F2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3E4D87C629AD741800D3EC7B /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		3E4D87C829AD744C00D3EC7B /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		3E5130DF2BA34FE500A628EB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		3E571FDF29AF248500AD153D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3E61935A2A2EC12200333918 /* VideoConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoConfiguration.swift; sourceTree = "<group>"; };
-		3E650BE22CEFC5F500AE9F6C /* TimeLapzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeLapzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E650BE42CEFC5F500AE9F6C /* TimeLapzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLapzeUITests.swift; sourceTree = "<group>"; };
-		3E650BE62CEFC5F500AE9F6C /* TimeLapzeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLapzeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3E650BE22CEFC5F500AE9F6C /* TimelapsrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimelapsrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E650BE42CEFC5F500AE9F6C /* TimelapsrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelapsrUITests.swift; sourceTree = "<group>"; };
+		3E650BE62CEFC5F500AE9F6C /* TimelapsrUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelapsrUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3E7461012CEE8A9700F8511D /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		3E7461032CEFC08B00F8511D /* RecorderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewModelTests.swift; sourceTree = "<group>"; };
 		3E75E34B2AED6EC90016EB52 /* CameraRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRecorder.swift; sourceTree = "<group>"; };
@@ -75,12 +75,12 @@
 		3E87A933299EBE0D00714AFC /* Recordable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordable.swift; sourceTree = "<group>"; };
 		3E9894D02A2ED44600C25059 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3EAB1AFC2BA8A33300BEC597 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		3EE5FE09296232C700768BF7 /* TimeLapze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeLapze.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EE5FE0C296232C700768BF7 /* TimeLapzeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLapzeApp.swift; sourceTree = "<group>"; };
+		3EE5FE09296232C700768BF7 /* Timelapsr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timelapsr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE5FE0C296232C700768BF7 /* TimelapsrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelapsrApp.swift; sourceTree = "<group>"; };
 		3EE5FE0E296232C700768BF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3EE5FE10296232C800768BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EE5FE13296232C800768BF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3EE5FE1A296232C800768BF7 /* TimeLapze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeLapze.entitlements; sourceTree = "<group>"; };
+		3EE5FE1A296232C800768BF7 /* Timelapsr.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timelapsr.entitlements; sourceTree = "<group>"; };
 		3EEFFBB829A9B662002D0040 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,32 +110,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E23A01C2B2FC65A0016DE8C /* TimeLapzeTests */ = {
+		3E23A01C2B2FC65A0016DE8C /* TimelapsrTests */ = {
 			isa = PBXGroup;
 			children = (
 				3E8497A42CFCF8E9003CFA6E /* ReviewManagerTests.swift */,
 				3E7461032CEFC08B00F8511D /* RecorderViewModelTests.swift */,
-				3E23A01D2B2FC65A0016DE8C /* TimeLapzeTests.swift */,
+				3E23A01D2B2FC65A0016DE8C /* TimelapsrTests.swift */,
 			);
-			path = TimeLapzeTests;
+			path = TimelapsrTests;
 			sourceTree = "<group>";
 		};
-		3E650BDD2CEFC5A800AE9F6C /* TimeLapzeUITests */ = {
+		3E650BDD2CEFC5A800AE9F6C /* TimelapsrUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3E650BE42CEFC5F500AE9F6C /* TimeLapzeUITests.swift */,
-				3E650BE62CEFC5F500AE9F6C /* TimeLapzeUITestsLaunchTests.swift */,
+				3E650BE42CEFC5F500AE9F6C /* TimelapsrUITests.swift */,
+				3E650BE62CEFC5F500AE9F6C /* TimelapsrUITestsLaunchTests.swift */,
 			);
-			path = TimeLapzeUITests;
+			path = TimelapsrUITests;
 			sourceTree = "<group>";
 		};
 		3EE5FE00296232C700768BF7 = {
 			isa = PBXGroup;
 			children = (
-				3E650BDD2CEFC5A800AE9F6C /* TimeLapzeUITests */,
+				3E650BDD2CEFC5A800AE9F6C /* TimelapsrUITests */,
 				3E571FDF29AF248500AD153D /* README.md */,
-				3EE5FE0B296232C700768BF7 /* TimeLapze */,
-				3E23A01C2B2FC65A0016DE8C /* TimeLapzeTests */,
+				3EE5FE0B296232C700768BF7 /* Timelapsr */,
+				3E23A01C2B2FC65A0016DE8C /* TimelapsrTests */,
 				3EE5FE0A296232C700768BF7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,21 +143,21 @@
 		3EE5FE0A296232C700768BF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3EE5FE09296232C700768BF7 /* TimeLapze.app */,
-				3E23A01B2B2FC65A0016DE8C /* TimeLapzeTests.xctest */,
-				3E650BE22CEFC5F500AE9F6C /* TimeLapzeUITests.xctest */,
+				3EE5FE09296232C700768BF7 /* Timelapsr.app */,
+				3E23A01B2B2FC65A0016DE8C /* TimelapsrTests.xctest */,
+				3E650BE22CEFC5F500AE9F6C /* TimelapsrUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3EE5FE0B296232C700768BF7 /* TimeLapze */ = {
+		3EE5FE0B296232C700768BF7 /* Timelapsr */ = {
 			isa = PBXGroup;
 			children = (
 				3E2EB6A429AD5A4C006F4F2A /* Info.plist */,
-				3EE5FE0C296232C700768BF7 /* TimeLapzeApp.swift */,
+				3EE5FE0C296232C700768BF7 /* TimelapsrApp.swift */,
 				3EE5FE0E296232C700768BF7 /* ContentView.swift */,
 				3EE5FE10296232C800768BF7 /* Assets.xcassets */,
-				3EE5FE1A296232C800768BF7 /* TimeLapze.entitlements */,
+				3EE5FE1A296232C800768BF7 /* Timelapsr.entitlements */,
 				3EE5FE12296232C800768BF7 /* Preview Content */,
 				3E87A931299EBDFF00714AFC /* RecorderViewModel.swift */,
 				3E87A933299EBE0D00714AFC /* Recordable.swift */,
@@ -175,7 +175,7 @@
 				3E8144672BAFD77C00F3E90F /* Localizable.xcstrings */,
 				3E7461012CEE8A9700F8511D /* InfoPlist.xcstrings */,
 			);
-			path = TimeLapze;
+			path = Timelapsr;
 			sourceTree = "<group>";
 		};
 		3EE5FE12296232C800768BF7 /* Preview Content */ = {
@@ -189,9 +189,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E23A01A2B2FC65A0016DE8C /* TimeLapzeTests */ = {
+		3E23A01A2B2FC65A0016DE8C /* TimelapsrTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E23A0212B2FC65A0016DE8C /* Build configuration list for PBXNativeTarget "TimeLapzeTests" */;
+			buildConfigurationList = 3E23A0212B2FC65A0016DE8C /* Build configuration list for PBXNativeTarget "TimelapsrTests" */;
 			buildPhases = (
 				3E23A0172B2FC65A0016DE8C /* Sources */,
 				3E23A0182B2FC65A0016DE8C /* Frameworks */,
@@ -202,16 +202,16 @@
 			dependencies = (
 				3E23A0202B2FC65A0016DE8C /* PBXTargetDependency */,
 			);
-			name = TimeLapzeTests;
+			name = TimelapsrTests;
 			packageProductDependencies = (
 			);
-			productName = TimeLapzeTests;
-			productReference = 3E23A01B2B2FC65A0016DE8C /* TimeLapzeTests.xctest */;
+			productName = TimelapsrTests;
+			productReference = 3E23A01B2B2FC65A0016DE8C /* TimelapsrTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3E650BE12CEFC5F500AE9F6C /* TimeLapzeUITests */ = {
+		3E650BE12CEFC5F500AE9F6C /* TimelapsrUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E650BEA2CEFC5F500AE9F6C /* Build configuration list for PBXNativeTarget "TimeLapzeUITests" */;
+			buildConfigurationList = 3E650BEA2CEFC5F500AE9F6C /* Build configuration list for PBXNativeTarget "TimelapsrUITests" */;
 			buildPhases = (
 				3E650BDE2CEFC5F500AE9F6C /* Sources */,
 				3E650BDF2CEFC5F500AE9F6C /* Frameworks */,
@@ -222,16 +222,16 @@
 			dependencies = (
 				3E650BE92CEFC5F500AE9F6C /* PBXTargetDependency */,
 			);
-			name = TimeLapzeUITests;
+			name = TimelapsrUITests;
 			packageProductDependencies = (
 			);
-			productName = TimeLapzeUITests;
-			productReference = 3E650BE22CEFC5F500AE9F6C /* TimeLapzeUITests.xctest */;
+			productName = TimelapsrUITests;
+			productReference = 3E650BE22CEFC5F500AE9F6C /* TimelapsrUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		3EE5FE08296232C700768BF7 /* TimeLapze */ = {
+		3EE5FE08296232C700768BF7 /* Timelapsr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EE5FE33296232C800768BF7 /* Build configuration list for PBXNativeTarget "TimeLapze" */;
+			buildConfigurationList = 3EE5FE33296232C800768BF7 /* Build configuration list for PBXNativeTarget "Timelapsr" */;
 			buildPhases = (
 				3EE5FE05296232C700768BF7 /* Sources */,
 				3EE5FE06296232C700768BF7 /* Frameworks */,
@@ -241,12 +241,12 @@
 			);
 			dependencies = (
 			);
-			name = TimeLapze;
+			name = Timelapsr;
 			packageProductDependencies = (
 				3EA255A52BADF2B70018FF63 /* SettingsAccess */,
 			);
-			productName = ScreenTimeLapse;
-			productReference = 3EE5FE09296232C700768BF7 /* TimeLapze.app */;
+			productName = Timelapsr;
+			productReference = 3EE5FE09296232C700768BF7 /* Timelapsr.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -272,7 +272,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3EE5FE04296232C700768BF7 /* Build configuration list for PBXProject "TimeLapze" */;
+			buildConfigurationList = 3EE5FE04296232C700768BF7 /* Build configuration list for PBXProject "Timelapsr" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -289,9 +289,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3EE5FE08296232C700768BF7 /* TimeLapze */,
-				3E23A01A2B2FC65A0016DE8C /* TimeLapzeTests */,
-				3E650BE12CEFC5F500AE9F6C /* TimeLapzeUITests */,
+				3EE5FE08296232C700768BF7 /* Timelapsr */,
+				3E23A01A2B2FC65A0016DE8C /* TimelapsrTests */,
+				3E650BE12CEFC5F500AE9F6C /* TimelapsrUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,7 +331,7 @@
 			files = (
 				3E8497A52CFCF8F7003CFA6E /* ReviewManagerTests.swift in Sources */,
 				3E7461042CEFC09400F8511D /* RecorderViewModelTests.swift in Sources */,
-				3E23A01E2B2FC65A0016DE8C /* TimeLapzeTests.swift in Sources */,
+				3E23A01E2B2FC65A0016DE8C /* TimelapsrTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,8 +339,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E650BE72CEFC5F500AE9F6C /* TimeLapzeUITestsLaunchTests.swift in Sources */,
-				3E650BE52CEFC5F500AE9F6C /* TimeLapzeUITests.swift in Sources */,
+				3E650BE72CEFC5F500AE9F6C /* TimelapsrUITestsLaunchTests.swift in Sources */,
+				3E650BE52CEFC5F500AE9F6C /* TimelapsrUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +359,7 @@
 				3EAB1AFD2BA8A33300BEC597 /* OnboardingViewModel.swift in Sources */,
 				3E9894D12A2ED44600C25059 /* Logger.swift in Sources */,
 				3EE5FE0F296232C700768BF7 /* ContentView.swift in Sources */,
-				3EE5FE0D296232C700768BF7 /* TimeLapzeApp.swift in Sources */,
+				3EE5FE0D296232C700768BF7 /* TimelapsrApp.swift in Sources */,
 				3E5130E02BA34FE500A628EB /* OnboardingView.swift in Sources */,
 				3E4D87C729AD741800D3EC7B /* Screen.swift in Sources */,
 				3E4D87C929AD744C00D3EC7B /* Camera.swift in Sources */,
@@ -371,12 +371,12 @@
 /* Begin PBXTargetDependency section */
 		3E23A0202B2FC65A0016DE8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3EE5FE08296232C700768BF7 /* TimeLapze */;
+			target = 3EE5FE08296232C700768BF7 /* Timelapsr */;
 			targetProxy = 3E23A01F2B2FC65A0016DE8C /* PBXContainerItemProxy */;
 		};
 		3E650BE92CEFC5F500AE9F6C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3EE5FE08296232C700768BF7 /* TimeLapze */;
+			target = 3EE5FE08296232C700768BF7 /* Timelapsr */;
 			targetProxy = 3E650BE82CEFC5F500AE9F6C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -395,12 +395,12 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartservices.TimeLapzeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christianmauerer.TimelapsrTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeLapze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TimeLapze";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timelapsr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Timelapsr";
 			};
 			name = Debug;
 		};
@@ -417,11 +417,11 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartservices.TimeLapzeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christianmauerer.TimelapsrTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimeLapze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TimeLapze";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timelapsr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Timelapsr";
 			};
 			name = Release;
 		};
@@ -437,12 +437,12 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartservices.TimeLapzeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christianmauerer.TimelapsrUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = TimeLapze;
+				TEST_TARGET_NAME = Timelapsr;
 			};
 			name = Debug;
 		};
@@ -458,11 +458,11 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartservices.TimeLapzeUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christianmauerer.TimelapsrUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = TimeLapze;
+				TEST_TARGET_NAME = Timelapsr;
 			};
 			name = Release;
 		};
@@ -596,20 +596,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = TimeLapze/TimeLapze.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Timelapsr/Timelapsr.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"TimeLapze/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Timelapsr/Preview Content\"";
 				DEVELOPMENT_TEAM = PPA4LZZXUN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeLapze/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TimeLapze;
+				INFOPLIST_FILE = Timelapsr/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Timelapsr;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -619,7 +619,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.2.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartservices.TimeLapze;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christianmauerer.Timelapsr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -633,21 +633,21 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = TimeLapze/TimeLapze.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Timelapsr/Timelapsr.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"TimeLapze/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Timelapsr/Preview Content\"";
 				DEVELOPMENT_TEAM = PPA4LZZXUN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TimeLapze/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TimeLapze;
+				INFOPLIST_FILE = Timelapsr/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Timelapsr;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -657,7 +657,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.2.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.smartservices.TimeLapze;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christianmauerer.Timelapsr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -668,7 +668,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E23A0212B2FC65A0016DE8C /* Build configuration list for PBXNativeTarget "TimeLapzeTests" */ = {
+		3E23A0212B2FC65A0016DE8C /* Build configuration list for PBXNativeTarget "TimelapsrTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E23A0222B2FC65A0016DE8C /* Debug */,
@@ -677,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E650BEA2CEFC5F500AE9F6C /* Build configuration list for PBXNativeTarget "TimeLapzeUITests" */ = {
+		3E650BEA2CEFC5F500AE9F6C /* Build configuration list for PBXNativeTarget "TimelapsrUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E650BEB2CEFC5F500AE9F6C /* Debug */,
@@ -686,7 +686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EE5FE04296232C700768BF7 /* Build configuration list for PBXProject "TimeLapze" */ = {
+		3EE5FE04296232C700768BF7 /* Build configuration list for PBXProject "Timelapsr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3EE5FE31296232C800768BF7 /* Debug */,
@@ -695,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EE5FE33296232C800768BF7 /* Build configuration list for PBXNativeTarget "TimeLapze" */ = {
+		3EE5FE33296232C800768BF7 /* Build configuration list for PBXNativeTarget "Timelapsr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3EE5FE34296232C800768BF7 /* Debug */,

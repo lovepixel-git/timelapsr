@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for TimeLapze
+about: Suggest an idea for Timelapsr
 title: "[FEAT]"
 labels: enhancement
 assignees: wkaisertexas
