@@ -1,112 +1,124 @@
-<img alt="Timelapsr" src="https://github.com/wkaisertexas/Timelapsr/assets/27795014/d79916bd-e0d5-4da1-85ce-4bf95f0f44fb" />
-
 <h1 align="center">Timelapsr</h1>
 
 <p align="center">
-  A menu bar application for creating screen and camera timelapses while keeping file sizes manageable
+  <strong>Screen timelapses for macOS, without the file sizes.</strong>
 </p>
 
 <p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#installation"><strong>Installation</strong></a> ·
-  <a href="#local-development"><strong>Local Development</strong></a> ·
-  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-  <a href="#contributing"><strong>Contributing</strong></a>
-</p>
-<br/>
-
-## Introduction
-
-<p align="center">
-  <img width="553" alt="Application demonstration photo in menu bar" src="https://github.com/wkaisertexas/Timelapsr/assets/27795014/785ee2b6-1ef5-4302-83da-c3d81a069074">
+  A menu bar app that records your screen at a fraction of real time, so a six-hour
+  build session becomes a few watchable minutes instead of six hours of video.
 </p>
 
 <p align="center">
-  <i>Timelapsr</i> is a minimalist, menu bar application for creating color accurate screen and camera timelapses while keeping file sizes manageable
+  <img alt="Platform" src="https://img.shields.io/badge/platform-macOS%2014%2B-lightgrey">
+  <img alt="Swift" src="https://img.shields.io/badge/Swift-5.0-orange">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
 </p>
 
-<p align="center">
-<img alt="color accurate comparison" src="https://github.com/wkaisertexas/Timelapsr/assets/27795014/ca37fa51-7851-4080-9e8c-f95f9ed529a8"></img>
-Color accuracy is an important feature which prevents you from recording washed-out, photocopied-looking time lapses
-</p>
+---
 
+> **Screenshots go here.** Menu bar dropdown while recording, and the Preferences
+> window showing the speed slider and idle timeout.
 
-## Features
+## Why this fork exists
 
-- **Color-Accurate**: What you see is what you get. Never screen record faded videos again[^1]
-- **Minimalist Design**: a fully featured menu bar recorder
-- **Hardware Accelerated**: fully utilized hardware accelerated encoding for a lightweight recording experience
-- **Space Saving**: Avoid the excessive file sizes of high quality video (can be as high as 7 GB / hour)
-- **Camera Recording**: Record your webcam or phone with the same frame rate and camera speed
-- **Secure**: Use the fully features of `ScreenCaptureKit` to only record certain windows, applications and more. Never leak your bank information in recordings again!
-- **Customizability**: Change everything from the frame rate, quality and speed multiple
+Timelapsr is a fork of [wkaisertexas/ScreenTimeLapse](https://github.com/wkaisertexas/ScreenTimeLapse)
+(TimeLapze), an excellent open-source menu bar timelapse recorder.
 
-## Installation
+The fork started as a bug hunt. Every recording came out unplayable, and tracking down
+why turned up two independent defects plus a latent third. Those fixes, along with idle
+detection and crash resilience, are what this fork adds.
 
-### App Store (Recommended)
+### The bug that started it
 
-Get **Timelapse** on the App Store:  
-[Download on the App Store](https://apps.apple.com/us/app/timelapsr/id6473860445)
+Every recording produced a file with `ftyp` and `mdat` atoms but **no `moov` atom** —
+video data present, index missing, nothing able to play it.
 
-### Homebrew  
+The cause was a single unset preference:
 
-Install **Timelapsr** via [Homebrew](https://brew.sh/):
+```swift
+// PreferencesViewModel declares a default...
+@AppStorage("timeMultiple") var timeMultiple: Double = 5.0
 
-```bash
-brew install timelapsr
+// ...but @AppStorage defaults only seed the SwiftUI binding. Nothing is written to
+// UserDefaults until the user actually moves the control. The capture path reads
+// the store directly:
+timeMultiple = UserDefaults.standard.double(forKey: "timeMultiple")   // → 0 when unset
+
+// ...and 0 reaches the frame timing math as:
+tmpFrameBuffer?.offsettingTiming(by: offset, multiplier: 1.0 / timeMultiple)   // → ∞
 ```
 
-### Direct Download  
+An infinite multiplier poisons every presentation timestamp, `input.append()` fails, the
+`AVAssetWriter` moves to `.failed`, and a failed writer silently skips writing the `moov`
+atom.
 
-Download the latest version from the [Releases page](https://github.com/wkaisertexas/Timelapsr/releases).  
+The Preferences window displayed **"5x"** the whole time. The recorder was receiving
+**0**. It hit every user who recorded before opening Preferences, and stayed invisible
+to anyone who had ever touched the speed slider.
 
-1. Download `Timelapsr.zip`
-2. If Chrome or Safari warns about the file, ignore it
-3. Extract the archive to get `Timelapsr.app`
-4. Move it to your `Applications` folder
+## What's different from upstream
 
-## Local Development
+| | |
+|---|---|
+| **Recordings actually play** | Real defaults registered at launch, plus guards so a zero or negative multiplier can never reach the timing math |
+| **No frames lost on stop** | `stopCapture()` is awaited and late buffers are dropped, instead of racing `markAsFinished()` and failing the writer |
+| **Interrupted sessions survive** | Display sleep, an unplugged monitor, or a force quit now finalize the file, turning total loss into a truncated but valid recording |
+| **Stream failures get reported** | `SCStream` holds its delegate weakly; the delegate is now retained rather than deallocated immediately after creation |
+| **Pause when idle** | Capture stops after a configurable period without input, so breaks do not become dead air |
 
-To develop Timelapsr locally, you will need to clone and open this repository in XCode.
+## Install
 
-Once that's done, you can use the following commands to run the app locally:
+Requires macOS 14 or later.
 
-```console
-git clone https://github.com/wkaisertexas/Timelapsr
-cd Timelapsr
+```bash
+git clone https://github.com/christianmauerer/timelapsr.git
+cd timelapsr
 open Timelapsr.xcodeproj
 ```
 
-Following this, you need to allow the app to be built for local signing. 
+Build and run from Xcode. Building locally signs the app with your own identity, which
+avoids the Gatekeeper warnings that come with unsigned downloads.
 
-## Tech Stack
+Grant **Screen Recording** permission in System Settings → Privacy & Security when
+prompted. Without it macOS silently hands back desktop wallpaper with no windows.
 
-- [SwiftUI](https://developer.apple.com/documentation/swiftui/)
-- [ScreenCaptureKit](https://developer.apple.com/documentation/screencapturekit/)
-- [AVFoundation](https://developer.apple.com/av-foundation/)
-- [CoreMedia](https://developer.apple.com/documentation/coremedia)
+## Usage
 
-## Contributing
+Click the menu bar icon to start and stop. Recordings land in the folder set under
+Preferences → Save Location.
 
-Contributions are welcome! Here's how you can contribute:
+Settings worth knowing:
 
-- [Open an issue](https://github.com/wkaisertexas/Timelapsr/issues) if you believe you've encountered a bug
-- Submit a [pull request](https://github.com/wkaisertexas/Timelapsr/pull) to add features, improve usability, or fix bugs
+- **Speed** — how much faster than real time. At 10x, an hour of work becomes six
+  minutes. Lower values capture more frames, which keeps the option to speed up further
+  later. You cannot recover frames you never captured.
+- **Pause when idle** — stop capturing after N seconds without keyboard or mouse input.
+  Defaults to Never.
+- **Output FPS** — playback frame rate. Does not affect quality, only how long the
+  finished video runs.
 
-<a href="https://github.com/wkaisertexas/Timelapsr/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wkaisertexas/Timelapsr" />
-</a>
+## Building from the command line
 
-## Repo Activity
+```bash
+xcodebuild build -project Timelapsr.xcodeproj -scheme Timelapsr -destination 'platform=macOS'
+xcodebuild test  -project Timelapsr.xcodeproj -scheme Test      -destination 'platform=macOS'
+```
 
-![Screen Time Lapse Repo Activity](https://repobeats.axiom.co/api/embed/3c10f8fa2ca2324639b9986cb38043750550c993.svg "Repobeats analytics image")
+## How it works
+
+SwiftUI, ScreenCaptureKit, and AVFoundation. `SCStream` delivers frames to an
+`AVAssetWriter`, and frames are decimated against a time multiplier so the timelapse is
+built *while recording* rather than by speeding up a full-rate capture afterward. That
+is what keeps the files small: a six-hour session is a few hundred megabytes instead of
+tens of gigabytes.
+
+## Credits
+
+Original work by [William Kaiser](https://github.com/wkaisertexas) as
+[TimeLapze](https://github.com/wkaisertexas/ScreenTimeLapse), MIT licensed. This fork
+retains that license and copyright.
 
 ## License
 
-Timelapsr is released under the [MIT License](LICENSE), ensuring open-source availability
-
-> [!IMPORTANT]
-> If you liked this project, consider giving the repository a star ⭐️!
-
-[^1]: [Apple's screen recorder converts the display's color space](https://community.adobe.com/t5/premiere-pro-discussions/inaccurate-colors-from-desktop-recording/m-p/12168181) from **DCI_P3** to **sRGB**. This subtle error makes it unsuitable for color-sensitive work. Even [HDR video struggles with persistent overexposure issues in screenshots](https://github.com/iina/iina/issues/3866). 
+MIT. See [LICENSE](LICENSE).
