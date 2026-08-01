@@ -284,20 +284,6 @@ class RecorderViewModel: ObservableObject {
 
   // MARK: Applications Menu
 
-  /// Flips the enabled and disabled app in ``apps``
-  func invertApplications() {
-    var localBundleIDs = enabledBundleIdentifiers
-
-    for appName in self.apps.keys {
-      let enabled = !self.apps[appName]!
-
-      self.apps[appName] = enabled
-      localBundleIDs[appName.bundleIdentifier] = enabled
-    }
-
-    enabledBundleIdentifiers = localBundleIDs
-  }
-
   /// Resets ``apps`` by setting each `value` to `true`
   func resetApps() {
     var localBundleIDs = enabledBundleIdentifiers

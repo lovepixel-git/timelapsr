@@ -103,17 +103,6 @@ struct InputDevices: View {
   /// Renders the `reset`, `invert` and `toggle` buttons
   @ViewBuilder
   func actionsMenu() -> some View {
-    // Inverts enabled and disabled applications
-    Button(
-      action: {
-        self.viewModel.invertApplications()
-      },
-      label: {
-        Image(systemName: "rectangle.2.swap")
-
-        Text("Invert")
-      })
-
     // Makes all applications enabled
     Button(
       action: {

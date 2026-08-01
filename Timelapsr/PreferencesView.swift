@@ -46,7 +46,6 @@ struct PreferencesView: View {
 
       HStack {
         Button("Enable All") { recorderViewModel.resetApps() }
-        Button("Invert") { recorderViewModel.invertApplications() }
         Spacer()
         Text("\(enabledAppCount) of \(sortedApps.count) enabled")
           .font(.caption)
@@ -55,16 +54,34 @@ struct PreferencesView: View {
 
       Divider()
 
-      ScrollView {
-        VStack(alignment: .leading, spacing: 2) {
-          ForEach(sortedApps, id: \.self) { app in
-            appRow(app)
-          }
+      // An explicit frame is required: the enclosing TabView uses `.fixedSize()`, which
+      // resolves a scrollable region to its ideal height — zero — and silently collapses
+      // the list to nothing.
+      if sortedApps.isEmpty {
+        VStack(alignment: .leading, spacing: 6) {
+          Text("No applications found.")
+            .foregroundStyle(.secondary)
+          Text(
+            "This usually means Screen Recording permission is not granted. Open the menu bar icon and choose \"Grant Screen Recording Permission\"."
+          )
+          .font(.caption)
+          .foregroundStyle(.secondary)
         }
+        .frame(width: 380, height: 260, alignment: .topLeading)
+      } else {
+        ScrollView {
+          VStack(alignment: .leading, spacing: 4) {
+            ForEach(sortedApps, id: \.self) { app in
+              appRow(app)
+            }
+          }
+          .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(width: 380, height: 260)
       }
-      .frame(height: 260)
     }
     .padding(30)
+    .frame(width: 450, alignment: .leading)
   }
 
   /// One checkbox row, with the app's real icon for quick scanning
