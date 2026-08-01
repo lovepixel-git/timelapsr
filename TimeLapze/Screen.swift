@@ -76,21 +76,33 @@ class Screen: NSObject, SCStreamOutput, Recordable {
 
     guard let writer = writer, let input = input else { return }
 
+    // Set the state before stopping the stream so `handleVideo` starts rejecting
+    // in-flight buffers immediately. Ordering matters: any frame appended after
+    // `markAsFinished()` below fails the writer.
     self.state = .stopped
 
     logger.log("Screen -- saved recording")
 
-    if let stream = stream {
-      stream.stopCapture()
-    }
+    let stream = self.stream
 
-    while !input.isReadyForMoreMediaData {
-      logger.log("Not able to mark the stream as finished")
-      sleep(1)  // sleeping for a second
-    }
+    Task {
+      // `stopCapture()` must be awaited. Fire-and-forget returns while frames are
+      // still in flight, which is what raced `markAsFinished()` previously.
+      if let stream {
+        do {
+          try await stream.stopCapture()
+        } catch {
+          logger.error("Failed to stop capture: \(error.localizedDescription)")
+        }
+      }
 
-    input.markAsFinished()
-    writer.finishWriting { [self] in
+      input.markAsFinished()
+
+      // Await finalization. `finishWriting` is what writes the moov atom; when
+      // nothing waited on its completion handler, teardown could beat it and leave
+      // the file unplayable.
+      await writer.finishWriting()
+
       if writer.status == .completed {
         // Asset writing completed successfully
 
@@ -188,7 +200,10 @@ class Screen: NSObject, SCStreamOutput, Recordable {
     writer.add(input)
 
     // timeMultiple setup -> for some reason, does not return optional
-    timeMultiple = UserDefaults.standard.double(forKey: "timeMultiple")
+    // `double(forKey:)` yields 0 for an unset or invalid key, and 0 becomes an infinite
+    // multiplier in `appendBuffer`. Keep the declared default rather than trusting it.
+    let storedTimeMultiple = UserDefaults.standard.double(forKey: "timeMultiple")
+    timeMultiple = storedTimeMultiple > 0 ? storedTimeMultiple : timeMultiple
 
     return (writer, input)
   }
@@ -273,6 +288,13 @@ class Screen: NSObject, SCStreamOutput, Recordable {
       logger.error("No AVAssetWriter with the name `input` is present")
       return
     }
+
+    // Drop buffers that arrive after the recording stopped. `stopCapture()` is
+    // asynchronous, so ScreenCaptureKit keeps delivering in-flight frames for a
+    // short window after `saveRecording()` runs. Appending any of them once
+    // `input.markAsFinished()` has been called moves the writer to `.failed`, and a
+    // failed writer never emits the moov atom, leaving an unplayable ftyp+mdat file.
+    guard self.state == .recording else { return }
 
     guard
       let attachmentsArray: NSArray = CMSampleBufferGetSampleAttachmentsArray(

@@ -51,6 +51,18 @@ struct TimeLapzeApp: App {
 class TimeLapzeAppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationCenterDelegate {
   /// Triggered when the application finished launching and receives a launch notification `Notification` on the event
   func applicationDidFinishLaunching(_ notification: Notification) {
+    // `@AppStorage` defaults (such as `timeMultiple = 5.0` in PreferencesViewModel) only
+    // seed the SwiftUI binding — nothing is written to UserDefaults until the user
+    // actually moves the control. The recording path reads the store directly with
+    // `UserDefaults.standard.double(forKey:)`, which returns 0 for an unset key, and 0
+    // reaches the frame timing math as `1.0 / timeMultiple` == infinity. That poisons
+    // every presentation timestamp, fails the AVAssetWriter, and produces an unplayable
+    // file with no moov atom. Registering real defaults keeps the store in agreement
+    // with what Preferences displays.
+    UserDefaults.standard.register(defaults: [
+      "timeMultiple": 5.0
+    ])
+
     // Hide the dock icon
     if UserDefaults.standard.bool(forKey: "hideIcon") {
       NSApp.setActivationPolicy(.accessory)

@@ -84,7 +84,10 @@ class Camera: NSObject, Recordable {
     writer.add(input)
 
     // how much faster or slower the recording show be
-    timeMultiple = UserDefaults.standard.double(forKey: "timeMultiple")
+    // `double(forKey:)` yields 0 for an unset or invalid key, and 0 becomes an infinite
+    // multiplier in `appendBuffer`. Keep the declared default rather than trusting it.
+    let storedTimeMultiple = UserDefaults.standard.double(forKey: "timeMultiple")
+    timeMultiple = storedTimeMultiple > 0 ? storedTimeMultiple : timeMultiple
 
     return (writer, input)
   }
