@@ -70,6 +70,13 @@ struct PreferencesView: View {
     }
   }
 
+  /// Renders an idle-timeout duration as a short human label ("30 seconds", "5 minutes")
+  func idleTimeoutLabel(_ seconds: Double) -> String {
+    seconds < 60
+      ? "\(Int(seconds)) seconds"
+      : "\(Int(seconds / 60)) minute\(seconds >= 120 ? "s" : "")"
+  }
+
   @ViewBuilder
   func playbackVideoSettings() -> some View {
     Text(
@@ -80,6 +87,20 @@ struct PreferencesView: View {
       Text("\(String(format: "%.1f", preferencesViewModel.timeMultiple))x faster")
       Slider(value: $preferencesViewModel.timeMultiple, in: .init(uncheckedBounds: (1.0, 240.0)))
     }
+
+    Picker("Pause when idle", selection: $preferencesViewModel.idleTimeout) {
+      ForEach(preferencesViewModel.validIdleTimeouts, id: \.self) { seconds in
+        Text(seconds == 0 ? "Never" : idleTimeoutLabel(seconds)).tag(seconds)
+      }
+    }
+
+    Text(
+      preferencesViewModel.idleTimeout == 0
+        ? "Records continuously, including while you are away from the keyboard."
+        : "Stops capturing after \(idleTimeoutLabel(preferencesViewModel.idleTimeout)) without input, so breaks do not become dead air."
+    )
+    .font(.caption)
+    .foregroundStyle(.secondary)
 
     if #available(macOS 14.0, *) {
       Picker("Output FPS", selection: $preferencesViewModel.fpsDropdown) {

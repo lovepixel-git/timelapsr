@@ -19,12 +19,17 @@ class Screen: NSObject, SCStreamOutput, Recordable {
   // ScreenCaptureKit-Specific Functionality
   var screen: SCDisplay
   var stream: SCStream?
+  /// Strongly held because `SCStream` keeps only a weak reference to its delegate.
+  var streamDelegate: StreamDelegate?
   var apps: [SCRunningApplication: Bool] = [:]
   var showCursor: Bool = true
 
   // Recording timings
   var offset: CMTime = CMTime(seconds: 0.0, preferredTimescale: 60)
   var timeMultiple: Double = 1  // offset set based on settings
+  /// Seconds of user inactivity after which frames stop being captured. `0` records
+  /// continuously. Cached per recording in ``setupWriter``.
+  var idleTimeout: Double = 0
   var frameCount: Int = 0
   var frameChanged = true
 
@@ -205,6 +210,11 @@ class Screen: NSObject, SCStreamOutput, Recordable {
     let storedTimeMultiple = UserDefaults.standard.double(forKey: "timeMultiple")
     timeMultiple = storedTimeMultiple > 0 ? storedTimeMultiple : timeMultiple
 
+    // Read once per recording rather than per frame; `handleVideo` runs at the full
+    // display refresh rate. Changing the preference mid-recording has no effect,
+    // which matches how `timeMultiple` already behaves.
+    idleTimeout = max(0, UserDefaults.standard.double(forKey: "idleTimeout"))
+
     return (writer, input)
   }
 
@@ -248,10 +258,16 @@ class Screen: NSObject, SCStreamOutput, Recordable {
       config.shouldBeOpaque = true  // Turns off transparency
     }
 
+    // Retain the delegate. `SCStream` holds it weakly, so the previous inline
+    // `StreamDelegate()` could be deallocated immediately, meaning stream failures
+    // were never reported at all.
+    let delegate = StreamDelegate(owner: self)
+    self.streamDelegate = delegate
+
     stream = SCStream(
       filter: contentFilter,
       configuration: config,
-      delegate: StreamDelegate()
+      delegate: delegate
     )
 
     guard let stream = stream else { return }
@@ -295,6 +311,10 @@ class Screen: NSObject, SCStreamOutput, Recordable {
     // `input.markAsFinished()` has been called moves the writer to `.failed`, and a
     // failed writer never emits the moov atom, leaving an unplayable ftyp+mdat file.
     guard self.state == .recording else { return }
+
+    // Skip capture while the user is away, so stepping out for coffee does not
+    // become minutes of motionless footage. A timeout of 0 records continuously.
+    if idleTimeout > 0, systemIdleSeconds >= idleTimeout { return }
 
     guard
       let attachmentsArray: NSArray = CMSampleBufferGetSampleAttachmentsArray(
@@ -343,8 +363,28 @@ class Screen: NSObject, SCStreamOutput, Recordable {
 ///
 /// Technically required, but less used in this instance
 class StreamDelegate: NSObject, SCStreamDelegate {
+  /// Weak to avoid a retain cycle — the ``Screen`` owns this delegate.
+  weak var owner: Screen?
+
+  init(owner: Screen? = nil) {
+    self.owner = owner
+  }
+
   func stream(_ stream: SCStream, didStopWithError error: Error) {
     logger.error("The stream stopped with \(error.localizedDescription)")
+
+    // Salvage whatever was captured. A stream can die mid-session for reasons the
+    // user never asked for: display sleep, a monitor being unplugged, the app being
+    // force quit. This handler previously only logged, so the AVAssetWriter was
+    // never finalized, no moov atom was written, and the whole session was lost
+    // rather than merely truncated.
+    //
+    // The state check skips the normal stop path — `saveRecording()` sets `.stopped`
+    // before calling `stopCapture()` — which also prevents recursion here.
+    guard let owner, owner.state == .recording else { return }
+
+    logger.log("Stream stopped unexpectedly, finalizing to salvage the recording")
+    owner.saveRecording()
   }
 }
 

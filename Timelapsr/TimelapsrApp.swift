@@ -60,7 +60,8 @@ class TimelapsrAppDelegate: NSObject, NSApplicationDelegate, UNUserNotificationC
     // file with no moov atom. Registering real defaults keeps the store in agreement
     // with what Preferences displays.
     UserDefaults.standard.register(defaults: [
-      "timeMultiple": 5.0
+      "timeMultiple": 5.0,
+      "idleTimeout": 0.0,
     ])
 
     // Hide the dock icon

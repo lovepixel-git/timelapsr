@@ -13,6 +13,11 @@ class PreferencesViewModel: ObservableObject {
   @AppStorage("FPS") var fps: Double = 30.0
   @AppStorage("timeMultiple") var timeMultiple: Double = 5.0
 
+  /// Seconds of user inactivity after which frames stop being captured. `0` disables
+  /// the behaviour and records continuously.
+  @AppStorage("idleTimeout") var idleTimeout: Double = 0
+  let validIdleTimeouts: [Double] = [0, 30, 60, 120, 300, 600]
+
   @AppStorage("quality") var quality: QualitySettings = .medium
 
   @AppStorage("format") var format: AVFileType = baseConfig.validFormats.first!

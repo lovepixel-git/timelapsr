@@ -2,6 +2,16 @@ import AVFoundation
 import Foundation
 import ScreenCaptureKit
 
+/// Seconds since the user last produced any HID input (key, mouse move, click, scroll).
+///
+/// Used to pause capture while the user is away so long breaks do not become dead air
+/// in the finished timelapse. `kCGAnyInputEventType` is `~0`, which has no Swift
+/// constant, so the raw value is constructed directly.
+var systemIdleSeconds: Double {
+  guard let anyInputEvent = CGEventType(rawValue: ~0) else { return 0 }
+  return CGEventSource.secondsSinceLastEventType(.hidSystemState, eventType: anyInputEvent)
+}
+
 /// Output information consists of details about each stream designed to be shared by a recorder view model
 struct OutputInfo {
   var frameRate: Float = 25.0
