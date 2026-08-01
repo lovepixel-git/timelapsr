@@ -15,6 +15,8 @@ class Camera: NSObject, Recordable {
 
   // Time Synchronization
   var offset: CMTime = CMTime(seconds: 0.0, preferredTimescale: 60)
+  /// Idle skipping is screen-only, so this stays zero on the camera path.
+  var skippedDuration: CMTime = .zero
   var timeMultiple: Double = 1  // offset set based on settings
   var frameCount: Int = 0
   var frameChanged = true

@@ -63,7 +63,7 @@ to anyone who had ever touched the speed slider.
 |---|---|
 | **Recordings actually play** | Real defaults registered at launch, plus guards so a zero or negative multiplier can never reach the timing math |
 | **No frames lost on stop** | `stopCapture()` is awaited and late buffers are dropped, instead of racing `markAsFinished()` and failing the writer |
-| **Interrupted sessions survive** | Display sleep, an unplugged monitor, or a force quit now finalize the file, turning total loss into a truncated but valid recording |
+| **Interrupted sessions survive** | Stream-level failures (display sleep, a disconnected display, macOS tearing down the capture) now finalize the file, turning total loss into a truncated but valid recording |
 | **Stream failures get reported** | `SCStream` holds its delegate weakly; the delegate is now retained rather than deallocated immediately after creation |
 | **Pause when idle** | Capture stops after a configurable period without input, so breaks do not become dead air |
 
@@ -95,8 +95,23 @@ Settings worth knowing:
   later. You cannot recover frames you never captured.
 - **Pause when idle** — stop capturing after N seconds without keyboard or mouse input.
   Defaults to Never.
-- **Output FPS** — playback frame rate. Does not affect quality, only how long the
-  finished video runs.
+- **Framing** — centre-crop to 16:9, 4:3, 1:1, or 9:16, for vertical or square cuts
+  without a separate post pass.
+- **Resolution** — cap the output long edge at 4K, 1440p, 1080p, or 720p. The single
+  largest lever on file size.
+
+### Known limitations
+
+Inherited from upstream, documented rather than hidden:
+
+- **The Output FPS and Quality pickers do nothing.** Both write to `UserDefaults` keys
+  that the capture path never reads, and frame decimation is hardcoded to 1/30. Use
+  **Speed** instead.
+- **Idle pause and the finalization fixes are screen-only.** The camera recorder still
+  has the un-awaited `finishWriting` and blocking `sleep(1)` that were fixed on the
+  screen path.
+- **Onboarding art does not render in a distributed build**, because the preview assets
+  live in `DEVELOPMENT_ASSET_PATHS`.
 
 ## Building from the command line
 

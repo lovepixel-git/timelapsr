@@ -21,6 +21,12 @@ class Screen: NSObject, SCStreamOutput, Recordable {
   var stream: SCStream?
   /// Strongly held because `SCStream` keeps only a weak reference to its delegate.
   var streamDelegate: StreamDelegate?
+
+  /// Guards ``isFinalizing`` — `saveRecording()` is reachable from the main thread (user
+  /// stop) and from ScreenCaptureKit's queue (``StreamDelegate``) simultaneously.
+  private let finalizeLock = NSLock()
+  /// Ensures the writer is finalized exactly once. Finalizing twice aborts the process.
+  private var isFinalizing = false
   var apps: [SCRunningApplication: Bool] = [:]
   var showCursor: Bool = true
 
@@ -30,6 +36,10 @@ class Screen: NSObject, SCStreamOutput, Recordable {
   /// Seconds of user inactivity after which frames stop being captured. `0` records
   /// continuously. Cached per recording in ``setupWriter``.
   var idleTimeout: Double = 0
+  /// Accumulated wall-clock time skipped while idle, collapsed out of the timeline.
+  var skippedDuration: CMTime = .zero
+  /// Presentation timestamp at which the current idle stretch began, if any.
+  var idleStartedAt: CMTime?
   /// Framing and output size, resolved once per recording in ``setupStream`` and reused by
   /// ``setupWriter`` so both agree.
   var geometry = CaptureGeometry(sourceRect: nil, width: 0, height: 0)
@@ -65,6 +75,16 @@ class Screen: NSObject, SCStreamOutput, Recordable {
 
     self.showCursor = showCursor
 
+    // Reset the once-only finalization latch for this new recording. Without this, the
+    // second recording in a session would be refused as a duplicate save.
+    finalizeLock.lock()
+    isFinalizing = false
+    finalizeLock.unlock()
+
+    // Idle accounting is per-recording.
+    skippedDuration = .zero
+    idleStartedAt = nil
+
     self.state = .recording
 
     setup(path: getFilename(), excluding: excluding)
@@ -82,7 +102,26 @@ class Screen: NSObject, SCStreamOutput, Recordable {
   func saveRecording() {
     guard self.enabled else { return }
 
-    guard let writer = writer, let input = input else { return }
+    // Finalization must happen exactly once. Two callers can reach this: the user
+    // stopping, and `StreamDelegate` salvaging an unexpected stream stop. Without this
+    // guard the second call reaches `finishWriting()` on an already-completed writer,
+    // which raises NSInternalInconsistencyException — an ObjC exception Swift cannot
+    // catch, so it aborts the process. The check and set are serialized on
+    // `finalizeLock` because the delegate is invoked on ScreenCaptureKit's queue while
+    // the user stop arrives on the main thread, so check-then-act would otherwise race.
+    finalizeLock.lock()
+    if isFinalizing {
+      finalizeLock.unlock()
+      logger.log("Screen -- finalization already in progress, ignoring duplicate save")
+      return
+    }
+    isFinalizing = true
+    finalizeLock.unlock()
+
+    guard let writer = writer, let input = input else {
+      isFinalizing = false
+      return
+    }
 
     // Set the state before stopping the stream so `handleVideo` starts rejecting
     // in-flight buffers immediately. Ordering matters: any frame appended after
@@ -102,6 +141,18 @@ class Screen: NSObject, SCStreamOutput, Recordable {
         } catch {
           logger.error("Failed to stop capture: \(error.localizedDescription)")
         }
+      }
+
+      // Only a writer that actually started can be finalized. If the stream died before
+      // the first frame arrived, status is still `.unknown`, and `markAsFinished()`
+      // aborts the process just as surely as double-finalizing does.
+      guard writer.status == .writing else {
+        logger.error(
+          "Writer never started (status \(writer.status.rawValue)); nothing to finalize")
+        self.writer = nil
+        self.input = nil
+        self.stream = nil
+        return
       }
 
       input.markAsFinished()
@@ -131,6 +182,12 @@ class Screen: NSObject, SCStreamOutput, Recordable {
             title: "Could not save asset", body: "\(error.localizedDescription)", url: nil)
         }
       }
+
+      // Release the handles so a stale writer can never be finalized again.
+      self.writer = nil
+      self.input = nil
+      self.stream = nil
+      self.streamDelegate = nil
     }
   }
 
@@ -331,9 +388,23 @@ class Screen: NSObject, SCStreamOutput, Recordable {
     // failed writer never emits the moov atom, leaving an unplayable ftyp+mdat file.
     guard self.state == .recording else { return }
 
-    // Skip capture while the user is away, so stepping out for coffee does not
-    // become minutes of motionless footage. A timeout of 0 records continuously.
-    if idleTimeout > 0, systemIdleSeconds >= idleTimeout { return }
+    // Skip capture while the user is away, so stepping out for coffee does not become
+    // minutes of motionless footage. A timeout of 0 records continuously.
+    //
+    // Dropping frames alone is not enough: presentation timestamps are wall-clock, so a
+    // skipped break would still occupy its full (divided) duration as a frozen frame.
+    // The elapsed idle span is therefore measured and accumulated into
+    // `skippedDuration`, which `appendBuffer` subtracts to collapse the gap.
+    if idleTimeout > 0, systemIdleSeconds >= idleTimeout {
+      if idleStartedAt == nil { idleStartedAt = buffer.presentationTimeStamp }
+      return
+    }
+
+    if let idleStart = idleStartedAt {
+      skippedDuration = skippedDuration + (buffer.presentationTimeStamp - idleStart)
+      idleStartedAt = nil
+      logger.log("Resumed after idle; total skipped \(self.skippedDuration.seconds)s")
+    }
 
     guard
       let attachmentsArray: NSArray = CMSampleBufferGetSampleAttachmentsArray(
@@ -404,6 +475,13 @@ class StreamDelegate: NSObject, SCStreamDelegate {
 
     logger.log("Stream stopped unexpectedly, finalizing to salvage the recording")
     owner.saveRecording()
+
+    // Bring the UI in line with reality. Without this the menu bar keeps showing a
+    // recording in progress and still offers "Exit and Save Recording" for a session
+    // that has already been finalized.
+    Task { @MainActor in
+      RecorderViewModel.shared.state = .stopped
+    }
   }
 }
 

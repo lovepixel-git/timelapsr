@@ -5,7 +5,7 @@
 `TimelapsrTests/` contains XCTest unit tests for app logic.  
 `TimelapsrUITests/` contains UI tests.  
 `Timelapsr.xcodeproj/` holds project settings and shared schemes (`Timelapsr`, `Test`).  
-Repo-level tooling/config includes `.swift-format` (format rules), `typos.toml` (spelling checks), and `timelapsr.rb` (Homebrew cask metadata).
+Repo-level tooling/config includes `.swift-format` (format rules), `typos.toml` (spelling checks).
 
 ## Build, Test, and Development Commands
 - `open Timelapsr.xcodeproj`: Open the project in Xcode for local development.
@@ -27,7 +27,7 @@ Name test files as `<Subject>Tests.swift` and test methods as `test<BehaviorOrSc
 Add tests alongside feature changes, including at least one edge/failure-path assertion for non-trivial logic.
 
 ## Commit & Pull Request Guidelines
-Recent commits favor short, imperative summaries, sometimes with an issue/PR reference (for example, `Update timelapsr.rb` or `Updating readme (#62)`).  
+Recent commits favor short, imperative summaries, sometimes with an issue/PR reference (for example, `Rebrand to Timelapsr` or `Add idle timeout and salvage interrupted recordings`).  
 Keep commits focused to one logical change.  
 PRs should include:
 - A clear description of what changed and why.

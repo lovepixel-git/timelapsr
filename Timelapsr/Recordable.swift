@@ -13,6 +13,9 @@ protocol Recordable: CustomStringConvertible {
 
   var timeMultiple: Double { get set }
   var offset: CMTime { get set }
+  /// Total wall-clock time deliberately skipped (idle periods), collapsed out of the
+  /// output timeline by ``offsettingTiming(by:skipping:multiplier:)``.
+  var skippedDuration: CMTime { get set }
   var frameCount: Int { get set }
 
   var lastAppendedFrame: CMTime { get set }
@@ -157,7 +160,7 @@ extension Recordable {
 
     guard
       let newBuffer = try? tmpFrameBuffer?.offsettingTiming(
-        by: offset, multiplier: 1.0 / timeMultiple)
+        by: offset, skipping: skippedDuration, multiplier: 1.0 / timeMultiple)
     else {
       return (buffer, lastAppendedFrame, true)
     }
@@ -215,7 +218,12 @@ extension CMSampleBuffer {
   /// Changes the speed of the sample buffer by `multiplier` in a recording with the `by` start time
   ///
   /// Does the work to create the time lapse
-  func offsettingTiming(by offset: CMTime, multiplier: Float64) throws -> CMSampleBuffer {
+  /// - Parameter skipping: Wall-clock time spent idle and deliberately not captured.
+  ///   Subtracting it collapses those gaps, so a break is removed from the timeline
+  ///   rather than becoming a frozen frame of the same (divided) duration.
+  func offsettingTiming(by offset: CMTime, skipping: CMTime = .zero, multiplier: Float64) throws
+    -> CMSampleBuffer
+  {
     let newSampleTimingInfos: [CMSampleTimingInfo]
 
     do {
@@ -223,7 +231,8 @@ extension CMSampleBuffer {
         var newSampleTiming = $0
         newSampleTiming.presentationTimeStamp =
           offset
-          + CMTimeMultiplyByFloat64($0.presentationTimeStamp - offset, multiplier: multiplier)
+          + CMTimeMultiplyByFloat64(
+            $0.presentationTimeStamp - offset - skipping, multiplier: multiplier)
         return newSampleTiming
       }
     } catch {
