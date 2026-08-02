@@ -21,13 +21,13 @@
 ---
 
 <p align="center">
-  <img src="docs/menu-bar.png" alt="Timelapsr menu bar" width="330">
-  &nbsp;&nbsp;
-  <img src="docs/app-filtering.png" alt="Per-app filtering" width="420">
+  <img src="docs/menu-bar.png" alt="Timelapsr menu bar app for macOS — start and stop screen time-lapse recording" width="300">
 </p>
 
 <p align="center">
-  <img src="docs/settings.png" alt="Timelapsr settings" width="470">
+  <img src="docs/settings.png" alt="Timelapsr video settings — recording speed, pause when idle, 9:16 framing and resolution cap" width="380">
+  &nbsp;
+  <img src="docs/app-filtering.png" alt="Timelapsr app settings — exclude individual applications from the screen recording" width="380">
 </p>
 
 ## What it does
