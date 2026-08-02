@@ -3,12 +3,13 @@
 <h1 align="center">Timelapsr</h1>
 
 <p align="center">
-  <strong>Screen timelapses for macOS, without the file sizes.</strong>
+  <strong>An open-source screen recorder for macOS that captures time-lapses.</strong>
 </p>
 
 <p align="center">
-  A menu bar app that records your screen at a fraction of real time, so a six-hour
-  build session becomes a few watchable minutes instead of six hours of video.
+  A lightweight menu bar app that records your screen at a fraction of real time, so a
+  six-hour build session becomes a few watchable minutes instead of six hours of video.
+  Built with Swift and ScreenCaptureKit. Free, MIT licensed, no account, no upload.
 </p>
 
 <p align="center">
@@ -28,6 +29,24 @@
 <p align="center">
   <img src="docs/settings.png" alt="Timelapsr settings" width="470">
 </p>
+
+## What it does
+
+Ordinary screen recording produces a file as long as the session — a six-hour build is
+six hours of video and tens of gigabytes. Timelapsr captures frames at intervals instead,
+so the time-lapse is assembled *while recording*. Same six hours becomes a few minutes and
+a few hundred megabytes.
+
+Useful for documenting work: coding time-lapses, design process videos, build-in-public
+clips, or just seeing where your day went.
+
+- **Screen time-lapse recording** at 1× to 240×, set before you start
+- **Menu bar app** — click to start, click to stop, no window in the way
+- **Pause when idle**, so breaks are cut out rather than left as dead air
+- **Per-app filtering** — exclude anything you do not want on camera
+- **Multi-display**, one file per screen
+- **Framing presets** (16:9, 4:3, 1:1, 9:16) and a resolution cap, for social cuts
+- **Colour-accurate** 10-bit HEVC in Display P3, so recordings are not washed out
 
 ## Why this fork exists
 
