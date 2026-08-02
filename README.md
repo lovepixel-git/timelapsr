@@ -25,9 +25,9 @@
 </p>
 
 <p align="center">
-  <img src="docs/settings.png" alt="Timelapsr video settings — recording speed, pause when idle, 9:16 framing and resolution cap" width="380">
+  <img src="docs/settings-video.png" alt="Timelapsr video settings — recording speed, pause when idle, 9:16 framing and resolution cap" width="380">
   &nbsp;
-  <img src="docs/app-filtering.png" alt="Timelapsr app settings — exclude individual applications from the screen recording" width="380">
+  <img src="docs/settings-apps.png" alt="Timelapsr app settings — exclude individual applications from the screen recording" width="380">
 </p>
 
 ## What it does
