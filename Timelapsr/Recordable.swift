@@ -16,6 +16,8 @@ protocol Recordable: CustomStringConvertible {
   /// Total wall-clock time deliberately skipped (idle periods), collapsed out of the
   /// output timeline by ``offsettingTiming(by:skipping:multiplier:)``.
   var skippedDuration: CMTime { get set }
+  /// Save folder currently held under security scope, released once writing finishes.
+  var scopedSaveLocation: URL? { get set }
   var frameCount: Int { get set }
 
   var lastAppendedFrame: CMTime { get set }
@@ -70,23 +72,39 @@ extension Recordable {
   }
 
   /// Turns a `String` into a valid file path (may be a temporary folder)
-  func getFileDestination(path: String) -> URL {
+  ///
+  /// - Note: On success the caller holds security-scoped access to the destination folder
+  ///   and must release it via ``SaveLocationBookmark/endAccess(_:)`` once writing
+  ///   finishes. ``scopedSaveLocation`` records the URL for exactly that purpose.
+  /// - Returns: the destination file URL, plus the folder now held under security scope
+  ///   (`nil` if none). Classes cannot call `mutating` protocol members, so the scope is
+  ///   returned for the caller to store rather than assigned here.
+  func getFileDestination(path: String) -> (url: URL, scope: URL?) {
     var url = URL(filePath: path, directoryHint: .notDirectory, relativeTo: .temporaryDirectory)
+    var scope: URL?
 
-    if let location = UserDefaults.standard.url(forKey: "saveLocation"),
+    // Prefer the bookmarked folder. Under the sandbox this is the only way to write
+    // outside the container, and it is what keeps the choice working across relaunches.
+    if let scoped = SaveLocationBookmark.resolveAndBeginAccess() {
+      scope = scoped
+      url = URL(filePath: path, directoryHint: .notDirectory, relativeTo: scoped)
+    } else if let location = UserDefaults.standard.url(forKey: "saveLocation"),
       FileManager.default.fileExists(atPath: location.path),
       FileManager.default.isWritableFile(atPath: location.path)
     {
+      // Unsandboxed builds, or a folder that happens to be writable anyway.
       url = URL(filePath: path, directoryHint: .notDirectory, relativeTo: location)
     } else {
-      logger.error("No camera save location present")
+      logger.error(
+        "No writable save location; falling back to the temporary directory. Pick a folder via Settings so a security-scoped bookmark is created."
+      )
     }
 
     do {  // delete old video
       try FileManager.default.removeItem(at: url)
     } catch { logger.error("Failed to delete file \(error.localizedDescription)") }
 
-    return url
+    return (url, scope)
   }
 
   /// Sends a notification using `UserNotifications` framework

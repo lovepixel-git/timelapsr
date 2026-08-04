@@ -48,6 +48,11 @@ class PreferencesViewModel: ObservableObject {
       showPicker = false
       guard res == .OK, let pickedURL = panel.url else { return }
 
+      // Persist a security-scoped bookmark, not just the path. The app is sandboxed, so
+      // the access granted by this panel expires when the app quits; without a bookmark
+      // the next launch can no longer write there and every recording silently lands in
+      // the container's temporary directory instead.
+      SaveLocationBookmark.store(pickedURL)
       saveLocation = pickedURL
     }
   }

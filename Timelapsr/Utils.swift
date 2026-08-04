@@ -101,6 +101,68 @@ func resolveCaptureGeometry(
   )
 }
 
+/// Security-scoped bookmark handling for the user's chosen save folder.
+///
+/// The app is sandboxed with `com.apple.security.files.user-selected.read-write`, so a
+/// plain path carries no write access — only a folder the user picked through an
+/// `NSOpenPanel` does, and even that access dies when the app relaunches unless it is
+/// persisted as a bookmark. Storing a bare `URL` (what the picker used to do) therefore
+/// worked until the next launch, after which every recording silently fell back to the
+/// container's temporary directory.
+enum SaveLocationBookmark {
+  private static let key = "saveLocationBookmark"
+
+  /// Persists a folder the user just picked, so access survives relaunches.
+  static func store(_ url: URL) {
+    do {
+      let data = try url.bookmarkData(
+        options: .withSecurityScope,
+        includingResourceValuesForKeys: nil,
+        relativeTo: nil
+      )
+      UserDefaults.standard.set(data, forKey: key)
+    } catch {
+      logger.error("Could not bookmark save location: \(error.localizedDescription)")
+    }
+  }
+
+  /// Resolves the stored folder and begins access.
+  ///
+  /// Returns `nil` when nothing is stored or the folder has gone (an unplugged drive, a
+  /// renamed directory). The caller **must** balance a non-nil result with
+  /// ``endAccess(_:)``, or the sandbox leaks the grant for the process lifetime.
+  static func resolveAndBeginAccess() -> URL? {
+    guard let data = UserDefaults.standard.data(forKey: key) else { return nil }
+
+    var stale = false
+    guard
+      let url = try? URL(
+        resolvingBookmarkData: data,
+        options: .withSecurityScope,
+        relativeTo: nil,
+        bookmarkDataIsStale: &stale
+      )
+    else {
+      logger.error("Save-location bookmark could not be resolved")
+      return nil
+    }
+
+    // Bookmarks go stale when the folder moves or the volume is remounted. Refresh it
+    // while access is held, otherwise it degrades again on the next launch.
+    if stale { store(url) }
+
+    guard url.startAccessingSecurityScopedResource() else {
+      logger.error("Denied security-scoped access to the save location")
+      return nil
+    }
+    return url
+  }
+
+  static func endAccess(_ url: URL?) {
+    url?.stopAccessingSecurityScopedResource()
+  }
+}
+
 /// Seconds since the user last produced any HID input (key, mouse move, click, scroll).
 ///
 /// Used to pause capture while the user is away so long breaks do not become dead air

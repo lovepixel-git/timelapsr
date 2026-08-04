@@ -38,6 +38,8 @@ class Screen: NSObject, SCStreamOutput, Recordable {
   var idleTimeout: Double = 0
   /// Accumulated wall-clock time skipped while idle, collapsed out of the timeline.
   var skippedDuration: CMTime = .zero
+  /// Save folder held under security scope while writing; released on finalize.
+  var scopedSaveLocation: URL?
   /// Presentation timestamp at which the current idle stretch began, if any.
   var idleStartedAt: CMTime?
   /// Framing and output size, resolved once per recording in ``setupStream`` and reused by
@@ -149,6 +151,8 @@ class Screen: NSObject, SCStreamOutput, Recordable {
       guard writer.status == .writing else {
         logger.error(
           "Writer never started (status \(writer.status.rawValue)); nothing to finalize")
+        SaveLocationBookmark.endAccess(self.scopedSaveLocation)
+        self.scopedSaveLocation = nil
         self.writer = nil
         self.input = nil
         self.stream = nil
@@ -183,7 +187,10 @@ class Screen: NSObject, SCStreamOutput, Recordable {
         }
       }
 
-      // Release the handles so a stale writer can never be finalized again.
+      // Release the sandbox grant now that the file is closed, then drop the handles so a
+      // stale writer can never be finalized again.
+      SaveLocationBookmark.endAccess(self.scopedSaveLocation)
+      self.scopedSaveLocation = nil
       self.writer = nil
       self.input = nil
       self.stream = nil
@@ -260,7 +267,10 @@ class Screen: NSObject, SCStreamOutput, Recordable {
     }
 
     // Creates a valid url path (may not be user-specified)
-    let url = getFileDestination(path: path)
+    // Hold the sandbox grant for the whole recording; released in `saveRecording`.
+    let destination = getFileDestination(path: path)
+    let url = destination.url
+    self.scopedSaveLocation = destination.scope
     let writer = try AVAssetWriter(url: url, fileType: fileType)
 
     let input = AVAssetWriterInput(mediaType: .video, outputSettings: settings)

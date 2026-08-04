@@ -17,6 +17,8 @@ class Camera: NSObject, Recordable {
   var offset: CMTime = CMTime(seconds: 0.0, preferredTimescale: 60)
   /// Idle skipping is screen-only, so this stays zero on the camera path.
   var skippedDuration: CMTime = .zero
+  /// Save folder held under security scope while writing; released on finalize.
+  var scopedSaveLocation: URL?
   var timeMultiple: Double = 1  // offset set based on settings
   var frameCount: Int = 0
   var frameChanged = true
@@ -54,7 +56,10 @@ class Camera: NSObject, Recordable {
   func setupWriter(device: AVCaptureDevice, path: String) throws -> (
     AVAssetWriter, AVAssetWriterInput
   ) {
-    let url = getFileDestination(path: path)
+    // Hold the sandbox grant for the whole recording; released in `saveRecording`.
+    let destination = getFileDestination(path: path)
+    let url = destination.url
+    self.scopedSaveLocation = destination.scope
 
     let videoSettings = VideoSettings.hevcDisplayP3
 
@@ -141,6 +146,8 @@ class Camera: NSObject, Recordable {
         sendNotification(title: "\(self) saved", body: "Saved video", url: writer.outputURL)
 
         logger.log("Saved video to \(writer.outputURL.absoluteString)")
+        SaveLocationBookmark.endAccess(self.scopedSaveLocation)
+        self.scopedSaveLocation = nil
       } else if writer.status == .failed {
         // Asset writing failed with an error
         guard let error = writer.error else { return }
