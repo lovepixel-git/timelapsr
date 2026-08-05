@@ -149,8 +149,18 @@ class Screen: NSObject, SCStreamOutput, Recordable {
       // the first frame arrived, status is still `.unknown`, and `markAsFinished()`
       // aborts the process just as surely as double-finalizing does.
       guard writer.status == .writing else {
+        // Never silently. A writer that failed mid-recording leaves a large file with no
+        // moov atom, i.e. the whole session is unplayable, and the user has no idea until
+        // they try to open it.
+        let reason = writer.error?.localizedDescription ?? "no error reported"
         logger.error(
-          "Writer never started (status \(writer.status.rawValue)); nothing to finalize")
+          "Cannot finalize: writer status \(writer.status.rawValue) — \(reason). Output at \(writer.outputURL.path) has no moov atom."
+        )
+        sendNotification(
+          title: "Recording could not be saved",
+          body: "The writer stopped early (\(reason)). The file is unplayable.",
+          url: nil
+        )
         SaveLocationBookmark.endAccess(self.scopedSaveLocation)
         self.scopedSaveLocation = nil
         self.writer = nil
@@ -413,7 +423,17 @@ class Screen: NSObject, SCStreamOutput, Recordable {
     if let idleStart = idleStartedAt {
       skippedDuration = skippedDuration + (buffer.presentationTimeStamp - idleStart)
       idleStartedAt = nil
-      logger.log("Resumed after idle; total skipped \(self.skippedDuration.seconds)s")
+
+      // Discard the stale pre-idle frame. `appendBuffer` writes `tmpFrameBuffer` — the
+      // *previous* frame — and during the idle stretch it was never refreshed. Appending
+      // it now would apply the newly grown `skippedDuration` to a timestamp from before
+      // the gap, yielding a presentation time earlier than the frame already written.
+      // AVAssetWriter rejects non-monotonic timestamps and moves to `.failed`, and a
+      // failed writer never emits a moov atom, so the whole session becomes unplayable.
+      tmpFrameBuffer = buffer
+      lastAppendedFrame = buffer.presentationTimeStamp
+
+      logger.info("Resumed after idle; total skipped \(self.skippedDuration.seconds)s")
     }
 
     guard

@@ -1,6 +1,11 @@
 import os
 
-/// `Logger` singleton for the class used to remove print statements and streamline debugging experience
+/// `Logger` singleton used across the app instead of print statements.
 ///
-/// Contains all necessary information as well as possible future extensions to the logging class in production
-let logger = Logger()
+/// The subsystem and category are set explicitly. A bare `Logger()` writes to a nameless
+/// subsystem that `log show --predicate 'process == "..."'` cannot retrieve, which made a
+/// silent writer failure impossible to diagnose after the fact. With a subsystem, errors
+/// persist to the unified log and can be read back with:
+///
+///     log show --predicate 'subsystem == "com.christianmauerer.Timelapsr"' --last 1h
+let logger = Logger(subsystem: "com.christianmauerer.Timelapsr", category: "recording")

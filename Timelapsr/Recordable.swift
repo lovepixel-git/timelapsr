@@ -184,7 +184,13 @@ extension Recordable {
     }
 
     guard input.append(newBuffer) else {
-      logger.error("failed to append data")
+      // A rejected append is not cosmetic: it means the writer has moved to `.failed`,
+      // and from here the session can no longer produce a moov atom. Log why, loudly,
+      // because the previous bare message made this indistinguishable from a dropped
+      // frame.
+      logger.error(
+        "input.append rejected at pts \(newBuffer.presentationTimeStamp.seconds)s — writer is now unrecoverable. Underlying: \(String(describing: self.writer?.error))"
+      )
       return (buffer, lastAppendedFrame, true)
     }
 
